@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1">
+    <title>예술의 전당</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <!-- <link rel="stylesheet" href="./css/main_nav.css"> -->
+    <link rel="stylesheet" href="./css/sub_nav_tab.css">
+</head>
+<style>
+.m_nav_top2{
+position: fixed;
+display: flex;
+width: 100%;
+justify-content: space-between;
+padding-top: 40px;
+z-index: 999;
+}
+.m_nav_wrap2{
+  background: #fff;
+  position: fixed;
+  left: -100%;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  transition: left 0.4s ease;
+  z-index: 999;
+  padding-left: 10px;
+}
+.sac_search{
+    position: relative;
+    transform: translateY(-12px);
+}
+.btn_sac_search{
+    position: absolute;
+    right: 30px;
+}
+.sac_search_d{
+    padding-left: 10px;
+    width: 310px;
+    height: 50px;
+    border: 1px solid #d9d9d9;
+    border-radius: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.search_rec{
+    padding-top: 130px;
+}
+.search_rec_tit{
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.search_con_sec1{
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+    height: 30px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+.search_con_sec1 p{
+    background: #f0f0f0;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+.search_con_sec2{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    height: 30px;
+    margin-bottom: 60px;
+    align-items: center;
+}
+.search_con_sec2 p{
+    background: #f0f0f0;
+    padding: 10px 15px;
+    border-radius: 50px;
+}
+.search_now_tit{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px;
+}
+.search_rec_mini{
+    color: #616161;
+    font-size: 12px;
+}
+.search_ranking{
+    text-align: left;
+}
+.search_ranking li{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px 20px 0px;
+}
+.search_num_r{
+    color: #E40030;
+    font-weight: 700;
+}
+.search_num_b{
+    color: #616161;
+    font-weight: 700;
+}
+.search_num_g{
+    color: #616161;
+}
+</style>
+<body>
+    <header id="header">
+     </header>
+        <div class="in">
+            <div class="m_login_page">
+                    <a href="#"><img src="./imges/common_svg/btn_back.svg" alt="backt_to_home" class="btn_back"></a>
+                    <h1 class="txt_about_login">로그인</h1>
+            </div>
+            <div class="mlp_top mb50">
+                <img src="./imges/sec_sujung/Seoul_Arts_Center/images/login/logo_contents.jpg" alt="예술의전당 로고" class="mb30">
+                <p>우리나라 문화예술의 중심</p>
+                <p>예술의전당에 오신 것을 환영합니다.</p>
+            </div>
+            <form action="#">
+                <fieldset>
+                    <legend></legend>
+                    <ul>
+                        <li>
+                            <label for="userID"></label>
+                            <div class="login_warp">
+                                <input type="text" id="userID" placeholder="아이디를 입력해주세요." required maxlength="10" class="login_box color_b">
+                            </div>
+                        </li>
+                        <li>
+                            <label for="userPW"></label>
+                            <div class="login_warp pwww">
+                                <input type="password" id="userPW" placeholder="비밀번호 (8~12자 영문자+숫자+특수문자)" minlength="12" class="login_box pwww color_b">
+                                <button type="button" class="btn_login_eye">
+                                    <img src="./imges/sec_sujung/Seoul_Arts_Center/images/login/login_eye.svg" alt="비밀번호 가리기">
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </fieldset>
+            </form>
+            <div class="mlp_radio">
+                <ul>
+                    <li><input type="radio" name="btn_about_login" value="자동로그인" class="btn_radio_color"><span>자동로그인</span></li>
+                    <li><input type="radio" name="btn_about_login" value="아이디저장" class="btn_radio_color"><span>아이디저장</span></li>
+                </ul>
+            </div>
+            <div class="mlp_login_box">
+                <a href="./blackgroup_mainpage.html">로그인</a>
+            </div>
+            <div class="mlp_no_radio">
+                <ul>
+                    <li><a href="#">아이디 찾기</a></li>
+                    <li><a href="#">비밀번호 찾기</a></li>
+                </ul>
+            </div>
+            <div class="mlp_sns_login">
+                <div class="sns_login_l">
+                    <p>SNS로 예술의전당</p>
+                    <p>간편하게 시작하기</p>
+                </div>
+                <div class="sns_login_r">
+                    <a href="#"><img src="./imges/sec_sujung/Seoul_Arts_Center/images/login/login_naver.svg" alt="네이버로 로그인하기"></a>
+                    <a href="#"><img src="./imges/sec_sujung/Seoul_Arts_Center/images/login/login_apple.svg" alt="애플로 로그인하기"></a>
+                    <a href="#"><img src="./imges/sec_sujung/Seoul_Arts_Center/images/login/login_kakao.svg" alt="카카오로 로그인하기"></a>
+                </div>
+            </div>
+            <p class="join_us color_b">아직 회원이 아니신가요?</p>
+            <div class="mlp_join_box">
+                <a href="./mp_join_us.html">회원가입</a>
+            </div>
+    <!------------------------ pop-up-------------->
+            <!-- <div class="sec_popup">
+                <div class="popup_box">
+                    <div class="popup_content">
+                        <p>로그인 하시겠습니까?</p>
+                    </div>
+                    <ul class="popup_cho">
+                        <li>
+                            <button type="button" class="popup_yes" ><span>예</span></button>
+                        </li>
+                        <li>
+                            <button type="button" class="popup_no"><span>아니오</sapn></button>
+                        </li>
+                    </ul>
+                </div>
+            </div> -->
+    </main>
+    <footer id="footer">
+        <div class="in footer_in">
+            <div class="footer_menu">
+                <p><a href="#">개인정보</a></p> 
+                <span class="bar"></span>
+                <p><a href="#">이용약관</a></p>
+            </div>
+            <div class="social">
+                <a href="#"><img src="./imges/common_svg/icon_social_facebook.svg" alt="facebook"></a>
+                <a href="#"><img src="./imges/common_svg/icon_social_youtube.svg" alt="youtube"></a>
+                <a href="#"><img src="./imges/common_svg/icon_social_insta.svg" alt="instagram"></a>
+                <a href="#"><img src="./imges/common_svg/icon_social_twitter.svg" alt="twitter"></a>
+            </div>
+            <div class="family_site">
+                <a href="#" class="btn_family">패밀리 사이트
+                    <span class="icon_arrow">
+                        <img src="./imges/common_svg/arrow_down_d9d9d9.svg" alt="">
+                    </span>
+                </a>
+                <div class="family_menu">
+                    <ul class="family_list">
+                        <li><a href="#">국립발레단</a></li>
+                        <li><a href="#">국립오페라단</a></li>
+                        <li><a href="#">국립합창단</a></li>
+                        <li><a href="#">국립현대무용단</a></li>
+                        <li><a href="#">국립심포니오케스트라</a></li>
+                        <li><a href="#">예술의전당 후원회</a></li>
+                        <li><a href="#">문화체육관광부</a></li>
+                    </ul>
+                </div>
+        </div>
+        <div class="footer_info">
+            <p>대표자  장형준     사업자등록번호  214-82-00264</p>
+            <p>통신판매업신고 서초 제 0706호</p>
+            <p>콜센터 1668-1352 </p>
+            <p>(월:09:00~18:00/화-일:09:00~20:00 (연중무휴))</p>
+            <p>주소 (우) 06757 서울시 서초구 남부순환로 2406 예술의전당</p>
+            <p class="copy">copyrightⓒ2023 Seoul Arts Center. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="./js/index.js"></script>
+    <!-- <script src="./js/sub_nav_tab.js"></script>
+    <script src="./js/main_nav.js"></script> -->
+    <script>
+//객체지정
+    let sjnav=document.querySelector(".m_nav_wrap");
+    let mnav=document.querySelector(".menu");
+    // let back=document.querySelectorAll(".btn_back");  
+    let sear=document.querySelector(".m_nav_wrap2");
+    let btn_sear=document.querySelector(".search");
+    let btn_eye=document.querySelector(".btn_login_eye");
+    let loginpw=document.querySelector("#userPW");
+    let sj=loginpw.type;
+    let ex=document.querySelector(".mlp_join_box") /*팝업 전 버튼 선택*/
+    // let popup=document.querySelector(".sec_popup")
+    // let popupno=document.querySelector(".popup_no")
+    // let popupyes=document.querySelector(".popup_yes")
+    // console.log(sj)
+//네비게이션
+        // mnav.addEventListener("click",function(){
+        // // sjnav.classList.add("on")
+        //     sjnav.style.left=0+"px";
+        // back[0].addEventListener("click",function(){
+        //     sjnav.style.left=-100+"%";})
+        // })
+//서치창
+        // btn_sear.addEventListener("click",function(){
+        //     sear.style.left=0+"px";
+        // back[1].addEventListener("click",function(){
+        //     sear.style.left=-100+"%";})
+        //  })   
+//로그인창_비밀번호 블라인드
+        btn_eye.addEventListener("click",function(){
+            if(sj==="password"){
+                loginpw.type="text"
+                btn_eye.children[0].src="./imges/sec_sujung/Seoul_Arts_Center/images/login/login_eye.svg"
+                sj="text"
+            }else{
+                loginpw.type="password"
+                this.children[0].src="./imges/sec_sujung/Seoul_Arts_Center/images/login/login_eye_close.svg"
+                sj="password"
+             }
+        })
+//팝업창
+        // ex.addEventListener("click",function(){
+        //     popup.classList.add("active");
+        // })
+        // popupno.addEventListener("click",function(){
+        //     popup.classList.remove("active");
+        // })
+        // popupyes.addEventListener("click",function(){
+        //     location.replace("http://127.0.0.1:5500/mp_search.html")
+        // })
+    </script>
+</body>
+</html>

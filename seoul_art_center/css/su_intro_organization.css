@@ -1,0 +1,151 @@
+@charset "utf-8";
+
+/* 웹폰트 호출 */
+@import url("https://hangeul.pstatic.net/hangeul_static/css/nanum-barun-gothic.css");
+/* 
+font-family: 'NanumBarunGothic';
+font-family: 'NanumBarunGothicBold';*/
+.tablist{
+    font-size: 14px;
+    display: flex;
+    border-bottom: 1px solid var(--lineColor);
+    border-top: 1px solid var(--lineColor);
+    margin-top: 20px;
+}
+.tab{
+    display: block;
+    width: calc(100%/2);
+    padding: 10px;
+    text-align: center;
+}
+.tabpanel{
+    padding: 15px 0;
+    display: none;
+}
+.tab-bar{
+    border: 1px solid var(--lineColor);
+    height: 15px;
+    margin-top: 12px;
+}
+/* tab javascript */
+.tabpanel.active{
+    display: block;
+}
+.tab.active{
+    color: var(--textColor);
+}.tablist{
+    font-size: 14px;
+    display: flex;
+    border-bottom: 1px solid var(--lineColor);
+    border-top: 1px solid var(--lineColor);
+}
+.tab{
+    display: block;
+    width: calc(100%/2);
+    padding: 10px;
+    text-align: center;
+}
+.tabpanel{
+    padding: 15px 0;
+    display: none;
+
+}
+.tab-bar{
+    border: 1px solid var(--lineColor);
+    height: 15px;
+    margin-top: 12px;
+}
+/* tab javascript */
+.tabpanel.active{
+    display: block;
+}
+.tab.active{
+    color: var(--textColor);
+}
+
+
+
+
+.su_container_organization{
+    width: 375px;
+    margin: 0 auto;
+}
+.su_art_image{
+    margin-top: 30px;
+    width: 250px;
+    height: 120px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.su_art_text{
+    font-size: 14px;
+    margin: 30px 30px 0 30px;
+    text-align: center;
+}
+
+
+
+.su_cored{
+margin-top: 30px;
+margin-bottom: 3px;
+display: flex;
+}
+.su_red-bar{
+width: 6px;
+height: 15px;
+background-color: #E40030;
+margin-right: 10px;
+}
+.su_cored h3{
+font-size: 16px;
+}
+
+
+
+
+
+
+
+
+.su_art_icon{
+    width: 115px;
+    height: 57px;
+    display: block;
+    margin: 0px auto 30px;
+}
+.middle-image {
+    width: 353px;
+    height: 200px;
+    display: block;
+    /* margin: 0 auto; */
+}
+.su_ins_list{
+    margin-top: 30px;
+    font-size: 14px;
+    text-align: justify;
+}
+.su_ins_list li{
+    list-style: circle;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    margin-right: 20px;
+}
+.su_homepage{
+    margin-top: 30px;
+    text-align: center;
+}
+/* .button{ */
+.su_homepagebtn{
+    display: inline-block;
+    width: 173px;
+    height: 50px;
+    line-height: 50px;
+    border: 1px solid #E40030;
+    border-radius: 20px;
+    color: #E40030;
+    text-decoration: none;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 70px;
+}

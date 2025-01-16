@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1">
+    <title>예술의 전당 - 티켓 예매하기</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/book_ticket_2.css">
+</head>
+<body>
+    <div class="in">
+        <div class="j_book_top">
+            <a href="#" class="btn_back"><img src="./imges/common_svg/btn_back.svg" alt="티켓예매 나가기"></a>
+            <h1>예매하기</h1>
+        </div>   
+    </div>
+        <div class="in j_book_ticket">
+            <h2 class="j_sc">날짜선택</h2>
+            <div class="calendar_area">
+                <div class="j_select_date">
+                    <a href="#"><img src="./imges/common_svg/icon_arrow_left.svg" alt="지난 달"></a>
+                    <p class="j_date">2024.07</p>
+                    <a href="#"><img src="./imges/common_svg/icon_arrow_right.svg" alt="다음 달"></a>
+                </div>
+                <div class="circle_area">
+                <img src="./imges/sec_jinhyun/table.png" alt="달력">
+                    <div class="j_circle"><a href="#"></a></div>
+                    <div class="j_circle"><a href="#"></a></div>
+                    <div class="j_circle"><a href="#"></a></div>
+                    <div class="j_circle"><a href="#"></a></div>
+                </div>
+            </div><!--calendar_area-->
+            
+            <div class="j_time_area">
+                <p>관람시간을 선택해주세요</p>
+                <div class="j_time_select">
+                    <p>14시 30분</p>
+                    <p class="j_ds">선택 ></p>
+                </div>
+                <div class="j_seat">
+                    <div class="j_casting color_g">
+                        이용훈&nbsp;&nbsp;마르코 브라토냐&nbsp;&nbsp;흐라추히 바센츠&nbsp;&nbsp;최종현 
+                    </div>
+                    <ul class="j_seat_info">
+                        <li>
+                            <span class="seat_color_p"></span>
+                            <p>R석</p>
+                            <p>1석</p>
+                        </li>
+                        <li class="j_seat_num">
+                            <span class="seat_color_b"></span>
+                            <p>A석</p>
+                            <p class="color_g">0석</p>
+                        </li>
+                        <li>
+                            <span class="seat_color_yg"></span>
+                            <p>C석</p>
+                            <p>53석</p>
+                        </li>
+                        <li>
+                            <span class="seat_color_g"></span>
+                            <p>S석</p>
+                            <p>1석</p>
+                        </li>
+                        <li>
+                            <span class="seat_color_o"></span>
+                            <p>B석</p>
+                            <p>16석</p>
+                        </li>
+                        <li>
+                            <span class="seat_color_y"></span>
+                            <p>D석</p>
+                            <p>175석</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="j_time_select">
+                    <p>19시 30분</p>
+                    <p class="j_ds">선택 ></p>
+                </div>
+                <div class="j_seat">
+                    <div class="j_casting color_g">
+                        테오도르 일린카이&nbsp;&nbsp;니콜로즈 라르빌라바&nbsp;&nbsp;홍주연&nbsp;&nbsp;박혜연 
+                    </div>
+                    <ul class="j_seat_info">
+                        <li>
+                            <span class="seat_color_p"></span>
+                            <p>R석</p>
+                            <p>1석</p>
+                        </li>
+                        <li>
+                            <span class="seat_color_b"></span>
+                            <p>A석</p>
+                            <p class="color_g">0석</p>
+                        </li>
+                        <li>
+                            <span class="seat_color_yg"></span>
+                            <p>C석</p>
+                            <p>53석</p>
+                        </li>
+                        <li>
+                            <span class="seat_color_g"></span>
+                            <p>S석</p>
+                            <p>1석</p>
+                        </li>
+                        <li>
+                            <span class="seat_color_o"></span>
+                            <p>B석</p>
+                            <p>16석</p>
+                        </li>
+                        <li>
+                            <span class="seat_color_y"></span>
+                            <p>D석</p>
+                            <p>175석</p>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--j_time_area-->
+            <div class="j_btn_area">
+                <div class="j_btn_b"><a href="./book_ticket_1.html">이전</a></div>
+                <div class="j_btn_n"><a href="./book_ticket_3.html">다음</a></div>
+            </div>
+        </div>
+
+<script>
+    let red=document.querySelectorAll(".j_ds");
+
+    red[0].addEventListener("click",function(){
+        this.style.color="#e40030";
+    })
+    red[1].addEventListener("click",function(){
+        this.style.color="#e40030";
+    })
+    let back=document.querySelectorAll(".btn_back"); 
+    document.querySelector(".btn_back").addEventListener("click",function(){
+    history.back();
+})
+</script>
+</body>
+</html>

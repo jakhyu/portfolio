@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <style>
+.popup_box{
+  width: 320px; height: 180px;
+  position: absolute;
+  top: 180px;
+  left: 50%;
+  margin-left: -165px;
+  text-align: center;
+  background-color: rgba(233, 233, 233, 0.9);
+  border-radius: 30px;
+  z-index: 1000;
+}
+.popup_content{
+  padding-top: 50px;
+  font-size: 16px;
+}
+.popup_cho{
+  padding-top: 40px;
+display: flex;
+justify-content: space-around;
+}
+.popup_cho li{
+  background: #e40030;
+  width: 45%;
+  padding: 10px;
+  border-radius: 20px;
+}
+.popup_cho li span{
+  color: #fff;
+}
+.sec_popup{display: none;}
+.sec_popup.active{display: block;}
+    </style>
+</head>
+<body>
+    <div class="sec_popup">
+        <div class="popup_box">
+            <div class="popup_content">
+                <p>로그인 하시겠습니까?</p>
+            </div>
+            <ul class="popup_cho">
+                <li>
+                    <button type="button" class="popup_yes" ><span>예</span></button>
+                </li>
+                <li>
+                    <button type="button" class="popup_no"><span>아니오</sapn></button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+<script>
+    let popup=document.querySelector(".sec_popup");
+    let popupno=document.querySelector(".popup_no");
+    let popupyes=document.querySelector(".popup_yes");
+
+        ex.addEventListener("click",function(){
+            popup.classList.add("active");
+        })
+        popupno.addEventListener("click",function(){
+            popup.classList.remove("active");
+        })
+        popupyes.addEventListener("click",function(){
+            location.replace("http://127.0.0.1:5500/book_ticket_6.html");
+        })
+</script>
+</body>
+</html>

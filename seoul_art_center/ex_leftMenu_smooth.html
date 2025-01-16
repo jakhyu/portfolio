@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+    <title>JAVASCRIPT</title>
+    <style>
+        *{
+            margin: 0; padding: 0;
+            box-sizing: border-box;
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+        button{
+            border: 0;
+            background: transparent;
+        }
+        #header{
+            background: #333;
+            height: 70px;
+        }
+        #contents{
+            background: skyblue;
+            height: 1000px;
+        }
+        #footer{
+            height: 100px;
+        }
+        #header{
+            padding: 0 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo{
+            font-size: 20px;
+            color: #fff;
+        }
+        .mobile-menu{
+            width: 26px; height: 20px;
+            border: 1px dotted orangered;
+        }
+        .mmenu{
+            width: 100%; height: 100%;
+        }
+        .toggle{
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: #fff;
+            margin-bottom: 3px;
+        }
+        .nav{
+            position: fixed;
+            left: -100%; top:0; /**/
+            background: #eee;
+            width: 100%;
+            height: 100%;
+            overflow-y: auto;
+            transition: left 0.3s;
+        }
+        .gnb{
+            margin-top: 70px;
+        }
+        .tit{
+            padding: 15px 20px;
+            border-bottom: 1px solid #ddd;
+            position: relative;
+            cursor: pointer;
+        }
+        .lnb{
+            background: #333;
+            color: #fff;
+            max-height: 0;
+            overflow: hidden;
+            transition: 0.3s;
+            /* display: none; */
+        }
+        .lnb-list{
+            padding: 10px 15px;
+        }
+        .lnb a{
+            display: block;
+            padding: 10px 0;
+        }
+        .open-arrow{
+            display: block;
+            width: 10px; height: 10px;
+            position: absolute; right: 15px;
+            top:16px;
+            border-right: 1px solid #333;
+            border-bottom: 1px solid #333;
+            transform: rotate(45deg);
+        }
+        .close-area{
+            position: absolute;
+            left: 15px; top:20px;
+            border: 1px solid red;
+            width: 26px; height: 26px;
+        }
+        .btn-close{
+           width: 100%; height: 100%;
+        }
+        .close{
+            display: block;
+            height: 2px;
+            background: #333;
+            transform: rotate(45deg);
+        }
+        .close+.close{
+            transform: rotate(-45deg);
+            margin-top: -1px;
+        }
+
+        /*Javascript*/
+        .nav.on{
+            left: 0;
+        }
+        .tit.active .open-arrow{
+            transform: rotate(-135deg);
+        }
+        /* .tit.active + .lnb{
+            display: block;
+        } */
+       
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="logo">
+                <a href="#">로고</a>
+            </div>
+            <div class="mobile-menu">
+                <button type="button" class="mmenu">
+                    <span class="toggle"></span>
+                    <span class="toggle"></span>
+                    <span class="toggle"></span>
+                </button>
+            </div>
+            <nav class="nav">
+                <ul class="gnb">
+                    <li class="d1">
+                      <div class="tit">
+                        <span class="ttxt">MENU1</span>
+                        <span class="open-arrow"></span>
+                      </div>
+                      <div class="lnb">
+                        <ul class="lnb-list">
+                            <li><a href="#">MENU1-1</a></li>
+                            <li><a href="#">MENU1-2</a></li>
+                            <li><a href="#">MENU1-3</a></li>
+                            <li><a href="#">MENU1-4</a></li>
+                            <li><a href="#">MENU1-5</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="d1">
+                        <div class="tit">
+                          <span class="ttxt">MENU2</span>
+                          <span class="open-arrow"></span>
+                        </div>
+                        <div class="lnb">
+                          <ul class="lnb-list">
+                              <li><a href="#">MENU2-1</a></li>
+                              <li><a href="#">MENU2-2</a></li>
+                              <li><a href="#">MENU2-3</a></li>
+                              <li><a href="#">MENU2-4</a></li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="d1">
+                        <div class="tit">
+                          <span class="ttxt">MENU3</span>
+                          <span class="open-arrow"></span>
+                        </div>
+                        <div class="lnb">
+                          <ul class="lnb-list">
+                              <li><a href="#">MENU3-1</a></li>
+                              <li><a href="#">MENU3-2</a></li>
+                              <li><a href="#">MENU3-3</a></li>
+                              <li><a href="#">MENU3-4</a></li>
+                              <li><a href="#">MENU3-5</a></li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="d1">
+                        <div class="tit">
+                          <span class="ttxt">MENU4</span>
+                          <span class="open-arrow"></span>
+                        </div>
+                        <div class="lnb">
+                          <ul class="lnb-list">
+                              <li><a href="#">MENU4-1</a></li>
+                              <li><a href="#">MENU4-2</a></li>
+                              <li><a href="#">MENU4-3</a></li>
+                          </ul>
+                        </div>
+                      </li>
+                </ul>
+
+                <div class="close-area">
+                    <button type="button" class="btn-close">
+                        <span class="close"></span>
+                        <span class="close"></span>
+                    </button>
+                </div>
+            </nav>
+        </header>
+        <main id="contents"></main>
+        <footer id="footer"></footer>
+       
+    </div>
+
+    <script>
+        let tits=document.querySelectorAll(".tit");
+        let lnbs=document.querySelectorAll(".lnb");
+        tits.forEach(function(tit){
+            tit.addEventListener("click", function(){
+                let sub=this.nextElementSibling;
+               
+                if(tit.classList.contains("active")===false){ //.lnb가  안보이고 .tit에 클래스가 없으면 
+                    for(let i=0;i<lnbs.length;i++){
+                        lnbs[i].style.maxHeight=0+"px";
+                    }
+                    sub.style.maxHeight=sub.scrollHeight+"px";//.lnb를 보이게
+                    for(let k=0;k<tits.length;k++){
+                        tits[k].classList.remove("active")
+                    }
+                    this.classList.add("active")//.tit에 클래스를 넣어라
+                }else{//.lnb가  보이고 .tit에 클래스가 있으면 
+                    this.classList.remove("active") //클래스를 빼라
+                    sub.style.maxHeight=0+"px";//.lnb를 감춰라
+                }
+                //console.log(sub.scrollHeight+"px")
+            })
+        });
+
+        let mmenu=document.querySelector(".mmenu");
+        let nav=document.querySelector(".nav");
+        let close=document.querySelector(".btn-close");
+        mmenu.addEventListener("click", function(){
+            nav.classList.add("on")
+        });
+        close.addEventListener("click", function(){
+            nav.classList.remove("on")
+        })
+
+    </script>
+</body>
+</html>

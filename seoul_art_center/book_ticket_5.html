@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1">
+    <title>예술의 전당 - 티켓 예매하기</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/book_ticket_5.css">
+</head>
+<style>
+/*-------------------------------수정--------------------------------*/
+.popup_box_j{
+  width: 320px; height: 180px;
+  position: fixed;
+  top: 180px;
+  left: 50%;
+  margin-left: -165px;
+  text-align: center;
+  background-color: rgba(233, 233, 233, 0.9);
+  border-radius: 30px;
+  z-index: 1000;
+}
+.popup_content_j{
+  padding-top: 50px;
+  font-size: 16px;
+}
+.popup_cho_j{
+  padding-top: 40px;
+display: flex;
+justify-content: space-around;
+}
+.popup_cho_j li{
+  background: #e40030;
+  width: 45%;
+  padding: 10px;
+  border-radius: 20px;
+}
+.popup_cho_j li span{
+  color: #fff;
+}
+.sec_popup_j{display: none;}
+.sec_popup_j.active{display: block;}
+/*-------------------------------수정--------------------------------*/
+</style>
+<body>
+    <div class="in">
+        <div class="j_book_top">
+            <a href="#" class="btn_back"><img src="./imges/common_svg/btn_back.svg" alt="티켓예매 나가기"></a>
+            <h1>예매하기</h1>
+        </div>   
+    </div>
+        <div class="in j_book_ticket">
+            <h2 class="j_sc">최종 결제</h2>
+            <div class="j_final_price">
+                <p>총 결제금액</p>
+                <p>330,000원</p>
+            </div>
+
+            <div id="tab-menu">
+                <div class="tablist color_g">
+                    <a href="#" class="tab active" id="tab1" role="tab" aria-controls="tab-panel1">신용카드</a>
+                    <a href="#" class="tab" id="tab2" role="tab" aria-controls="tab-panel2">간편결제</a>
+                    <a href="#" class="tab" id="tab3" role="tab" aria-controls="tab-panel3">무통장입금</a>
+                </div>
+    
+                <div class="panels">
+                    <div id="tab-panel1" class="tabpanel active" role="tabpanel" aria-labelledby="tab1">
+                        <div class="tab1-wrap">
+                            <div class="j_card">
+                                카드선택
+                            </div>
+                            <div class="j_tit">
+                                <a href="#" class="j_card_select">
+                                    <p>카드선택</p>
+                                    <span class="j_arrow"></span>
+                                </a>    
+                            </div>
+                            <div class="j_lnb">
+                                <ul class="j_card_b">
+                                    <li><a href="#">우리은행</a></li>
+                                    <li><a href="#">국민은행</a></li>
+                                    <li><a href="#">농협은행</a></li>
+                                    <li><a href="#">하나은행</a></li>
+                                    <li><a href="#">부산은행</a></li>
+                                    <li><a href="#">카카오뱅크</a></li>
+                                </ul>
+                            </div>
+                        </div><!--tab1-wrap-->
+                    </div><!--tab1-->
+    
+                    <div id="tab-panel2" class="tabpanel" role="tabpanel" aria-labelledby="tab2">
+                        <div class="tab2-wrap">
+                            <div class="j_pay">
+                                <img src="./imges/sec_jinhyun/pay_naver.png" alt="네이버페이">
+                                <p>네이버페이</p>
+                            </div>
+                            <div class="j_pay">
+                                <img src="./imges/sec_jinhyun/pay_kakaopay.png" alt="카카오페이">
+                                <p>카카오페이</p>
+                            </div>
+                            <div class="j_pay">
+                                <img src="./imges/sec_jinhyun/pay_isp.png" alt="ISP/페이북">
+                                <p>ISP/페이북</p>
+                            </div>
+                            <div class="j_pay">
+                                <img src="./imges/sec_jinhyun/pay_payco.png" alt="페이코">
+                                <p>페이코</p>
+                            </div>
+                        </div><!--tab2 wrap-->
+                    </div> <!--tab2-->
+
+                    <div id="tab-panel3" class="tabpanel" role="tabpanel" aria-labelledby="tab3">
+                        <div class="tab3-wrap">
+                            <div class="j_card">
+                                입금 은행 선택(가상계좌)
+                            </div>
+                            <div class="j_tit">
+                                <a href="#" class="j_card_select">
+                                    <p>카드선택</p>
+                                    <span class="j_arrow"></span>
+                                </a>    
+                            </div>
+                            <div class="j_lnb">
+                                <ul class="j_card_b">
+                                    <li><a href="#">우리은행</a></li>
+                                    <li><a href="#">국민은행</a></li>
+                                    <li><a href="#">농협은행</a></li>
+                                    <li><a href="#">하나은행</a></li>
+                                    <li><a href="#">부산은행</a></li>
+                                    <li><a href="#">카카오뱅크</a></li>
+                                </ul>
+                            </div>
+                        </div><!--tab3 wrap-->
+                    </div> <!--tab3-->
+                </div><!--panels-->
+<!---------------------------------결제하기 클래스명 확인(자바랑)------------------------------------>    
+            </div><!--tab menu-->
+            <div class="j_btn_area">
+                <div class="j_btn_b"><a href="./book_ticket_4.html">이전</a></div>
+                <div class="j_btn_n btnpay"><a href="#">결제하기</a></div>
+            </div>
+        </div>
+        <div class="sec_popup_j">
+            <div class="popup_box_j">
+                <div class="popup_content_j">
+                    <p>결제하시겠습니까?</p>
+                </div>
+                <ul class="popup_cho_j">
+                    <li>
+                        <button type="button" class="popup_yes_j" ><span>예</span></button>
+                    </li>
+                    <li>
+                        <button type="button" class="popup_no_j"><span>아니오</sapn></button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+ <!---------------------------------수정------------------------------------>           
+<script>
+    // tab
+    let tabitem=document.querySelectorAll(".tab");
+    let panels=document.querySelectorAll(".tabpanel");
+
+    tabitem.forEach(function(item,idx){
+            item.addEventListener("click",function(e){
+                e.preventDefault();
+                for(let i=0; i<tabitem.length; i++){
+                 tabitem[i].classList.remove("active");
+                 panels[i].classList.remove("active");
+             }
+                 this.classList.add("active");
+                 panels[idx].classList.add("active");
+            })
+        })
+
+
+        // 카드종류
+    let tits=document.querySelectorAll(".j_tit");
+    let lnbs=document.querySelectorAll(".j_lnb");
+        
+        console.log(lnbs)
+        console.log(tits)
+
+        tits.forEach(function(tit){
+            tit.addEventListener("click",function(){
+            // lnbs[0].style.display="block";
+            if(this.classList.contains("active")===false){
+                this.classList.add("active");
+                for(let i=0; i<lnbs.length; i++){
+                    lnbs[i].style.display="none";
+                }
+                this.nextElementSibling.style.display="block";
+            }
+            else{
+                this.classList.remove("active");
+                this.nextElementSibling.style.display="none";
+            }
+        })
+        })
+        // 간편결제
+        let el=document.querySelectorAll(".j_pay");
+        console.log(el);
+        
+        el[0].classList.add("active");
+        el.forEach(function(btn){
+            btn.addEventListener("click",function(){
+                for(let i=0; i<el.length; i++){
+                    el[i].classList.remove("active");
+                    }
+                    btn.classList.add("active");
+            })
+        });
+ //<!---------------------------------수정------------------------------------>           
+        //팝업 (body 결제하기의 a태그 지워야함)
+        let btnpay=document.querySelector(".btnpay");
+        let jpopup=document.querySelector(".sec_popup_j")
+        let j_yes=document.querySelector(".popup_yes_j")
+        let j_no=document.querySelector(".popup_no_j")
+
+        btnpay.addEventListener("click",function(){
+            jpopup.classList.add("active");
+        })
+        j_no.addEventListener("click",function(){
+            jpopup.classList.remove("active");
+        })
+        j_yes.addEventListener("click",function(){
+            location.replace("./book_ticket_6.html")
+        })
+</script>
+</body>
+</html>

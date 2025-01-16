@@ -1,0 +1,224 @@
+@charset "utf-8";
+
+/* 웹폰트 호출 */
+@import url("https://hangeul.pstatic.net/hangeul_static/css/nanum-barun-gothic.css");
+/* 
+font-family: 'NanumBarunGothic';
+font-family: 'NanumBarunGothicBold';*/
+
+
+
+
+/* 1열 */
+
+  .sulogoimg{
+    width: 160px;
+    height: 99px;
+    margin-left: 100px;
+    margin-top: 20px;
+  }
+
+  .sulow1txt{
+    margin: 20px auto 30px;
+    text-align: center;
+  }
+  .sulow1txt h2{
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+
+
+/* 2열 */
+
+.sucontainer2{
+  width: 375px;
+  display: flex;
+  align-items: center;
+  padding-top: 50px;
+  background-color: #F8E8E7;
+  position: relative;
+}
+
+.sutiimage{
+  width: 190px;
+  height: 158px;
+}
+
+.sutitext{
+  margin-left: 10px;
+  font-size: 14px;
+  position: absolute;
+  right: 25px; top: 90px;
+  text-align: center;
+}
+
+.sutitext .sutibold {
+  font-weight: bold;
+}
+
+
+
+
+/* 3열 */
+.sucontainer3{
+    width: 375px;
+    display: inline-block;
+    align-items: center;
+    padding: 80px 20px 40px 30px;
+    background: #fff;
+    position: relative;
+  }
+
+  .sutibooktext{
+    font-size: 14px;
+  }
+
+  .sutibooktext.su_bold{
+    font-weight: bold;
+  }
+
+  .sutibookimage{
+    width: 129px;
+    height: 149px;
+    position: absolute;
+    right: 50px;
+    top:30px; bottom: 30px;
+  }
+
+
+  /* 4열 */
+
+  .sucontainer4{
+    width: 375px;
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+    background-color: #F8E8E7;
+    position: relative;
+  }
+  
+  .supaimage{
+    width: 178px;
+    height: 127px;
+  }
+  
+  .supatext{
+    margin-left: 10px;
+    font-size: 14px;
+    position: absolute;
+    right: 25px; top: 80px;
+    text-align: center;
+  }
+  
+  .supatext .supabold {
+    font-weight: bold;
+  }
+
+
+/* 5열 */
+.sucontainer5{
+    width: 375px;
+    height: 200px;
+    display: inline-block;
+    background: #fff;
+    position: relative;
+  }
+
+  .susoimage{
+    width: 161px;
+    position: absolute;
+    right: 10px; top: 20px;
+  }
+
+
+  .susotext2{
+    font-size: 14px;
+    position: absolute;
+    top: 80px; left: 20px;
+    text-align: center;
+  } 
+
+  .susotext.subold{
+    font-weight: bold;
+  }
+
+
+
+
+
+
+/* 6열 */
+.sucontainer6{
+    padding: 35px 0;
+    background: #FF535E;
+  }
+.susactextall{
+    color: #fff;
+    text-align: center;
+}
+
+  .susactext{
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+
+  .susactext1{
+    font-size: 16px;
+
+  }
+
+  .susactext2{
+    margin-bottom: 10px;
+  }
+
+  .susacapplogo{
+    width: 101px;
+    height: 98px;
+    margin-right: 20px;
+    margin-top: -10px;
+  }
+
+  .susacbuttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .susacgoo, .susacapp{
+    width: 174px;
+    height: 50px;
+    border: 1px solid #E40030;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    background-color: #fff;
+    margin-top: 10px;
+    border-radius: 20px;
+  }
+
+  .su_button img {
+    margin-right: 10px;
+  }
+
+
+
+  /* 7열 */
+
+.sucontainer7{
+  padding: 10px auto;
+  background: #fff;
+  text-align: center;
+}
+
+.suyoutubethumbnail{
+  width: 324px;
+  height: 199px;
+  margin: 20px auto;
+  align-items: center;
+}

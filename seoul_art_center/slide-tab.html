@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        *{
+            margin: 0; padding: 0;
+            box-sizing: border-box;
+        }
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+        .tablist{
+            font-size: 14px;
+            display: flex;
+        }
+        .tab{
+            display: block;
+            text-align: center;
+            padding: 20px 10px;
+            color: #a4a4a4;
+        }
+        .tabpanel{
+            padding: 30px 0;
+            background-color: beige;
+            display: none;
+        }
+        .tabpanel.active{
+            display: block;
+        }
+        .tab.active{
+           border-bottom: 1px solid #000;
+           color: #000;
+        }
+        .ourslide {
+        text-align: center;
+        font-size: 14px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        }
+        .swiper-slide{
+        width: 30%;
+        }
+        .swiper-slide:nth-child(2){
+        width: 40%;
+        }
+        .swiper-slide:nth-child(3){
+        width: 80%;
+        }
+        .swiper-slide:nth-child(4){
+        width: 40%;
+        }
+        .swiper-slide:nth-child(5){
+        width: 40%;
+        }
+        .swiper-slide:nth-child(6){
+        width: 40%;
+        }
+    </style>
+</head>
+<body>
+    <div id="tab-menu">
+        <div class="swiper ourSwiper">
+            <div class="tablist swiper-wrapper ">
+                <a href="#" class="tab active swiper-slide" id="tab1" rol="tab" aria-controls="tab-panel1">넓이30%</a> 
+                <a href="#" class="tab swiper-slide" id="tab2" rol="tab" aria-controls="tab-panel2">넓이40%</a>
+                <a href="#" class="tab swiper-slide" id="tab3" rol="tab" aria-controls="tab-panel3">넓이80%</a>
+                <a href="#" class="tab swiper-slide" id="tab3" rol="tab" aria-controls="tab-panel4">넓이40%</a>
+                <a href="#" class="tab swiper-slide" id="tab3" rol="tab" aria-controls="tab-panel5">넓이40%</a>
+                <a href="#" class="tab swiper-slide" id="tab3" rol="tab" aria-controls="tab-panel6">넓이40%</a>
+            </div>
+        </div>   
+        <div class="panels">
+            <div id="tab-panel1" class="tabpanel active" role="tabpanel" aria-labelledby="tab1">
+                <h3>Title1</h3>
+                <p>1111111111111111111orem ipsum dolor sit amet, consectetur adipisicing elit. Ab officiis aliquid, exercitationem aperiam non, optio laboriosam recusandae vel nam rerum, aut suscipit sapiente autem vitae. Eius ratione delectus consequatur vero.</p>
+            </div>
+            <div id="tab-panel2" class="tabpanel" role="tabpanel" aria-labelledby="tab2">
+                <h3>Title2</h3>
+                <p>2222222222222222Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab officiis aliquid, exercitationem aperiam non, optio laboriosam recusandae vel nam rerum, aut suscipit sapiente autem vitae. Eius ratione delectus consequatur vero.</p>
+            </div>
+            <div id="tab-panel3" class="tabpanel" role="tabpanel" aria-labelledby="tab3">
+                <h3>Title3</h3>
+                <p>333333333333333Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab officiis aliquid, exercitationem aperiam non, optio laboriosam recusandae vel nam rerum, aut suscipit sapiente autem vitae. Eius ratione delectus consequatur vero.</p>
+            </div>
+            <div id="tab-panel4" class="tabpanel" role="tabpanel" aria-labelledby="tab4">
+                <h3>Title3</h3>
+                <p>4444444444444Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab officiis aliquid, exercitationem aperiam non, optio laboriosam recusandae vel nam rerum, aut suscipit sapiente autem vitae. Eius ratione delectus consequatur vero.</p>
+            </div>
+            <div id="tab-panel5" class="tabpanel" role="tabpanel" aria-labelledby="tab5">
+                <h3>Title3</h3>
+                <p>55555555555Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab officiis aliquid, exercitationem aperiam non, optio laboriosam recusandae vel nam rerum, aut suscipit sapiente autem vitae. Eius ratione delectus consequatur vero.</p>
+            </div>
+            <div id="tab-panel6" class="tabpanel" role="tabpanel" aria-labelledby="tab6">
+                <h3>Title3</h3>
+                <p>6666666666666666Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab officiis aliquid, exercitationem aperiam non, optio laboriosam recusandae vel nam rerum, aut suscipit sapiente autem vitae. Eius ratione delectus consequatur vero.</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        let tabitem=document.querySelectorAll(".tab")
+        let panels=document.querySelectorAll(".tabpanel")
+
+    tabitem.forEach(function(item, idx){
+        item.addEventListener("click",function(e){
+            e.preventDefault();
+            for(let i=0; i<tabitem.length; i++){
+            tabitem[i].classList.remove("active");
+            panels[i].classList.remove("active");
+        }
+        this.classList.add("active");
+        panels[idx].classList.add("active");
+        }) 
+    });
+    var swiper = new Swiper(".ourSwiper", {
+      scrollbar: {
+        el: ".swiper-scrollbar",
+        hide: true,
+      },
+      slidesPerView: "auto",
+      spaceBetween: 40,
+    });
+    
+    </script>
+</body>
+</html>

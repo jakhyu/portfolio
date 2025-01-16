@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1">
+    <title>예술의 전당</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <!-- <link rel="stylesheet" href="./css/main_nav.css"> -->
+    <link rel="stylesheet" href="./css/sub_nav_tab.css">
+</head>
+<style>
+.m_nav_top2{
+position: fixed;
+display: flex;
+width: 100%;
+justify-content: space-between;
+padding-top: 40px;
+z-index: 999;
+}
+.m_nav_wrap2{
+  background: #fff;
+  position: fixed;
+  left: -100%;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  transition: left 0.4s ease;
+  z-index: 999;
+  padding-left: 10px;
+}
+.sac_search{
+    position: relative;
+    transform: translateY(-12px);
+}
+.btn_sac_search{
+    position: absolute;
+    right: 30px;
+}
+.sac_search_d{
+    padding-left: 10px;
+    width: 310px;
+    height: 50px;
+    border: 1px solid #d9d9d9;
+    border-radius: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.search_rec{
+    padding-top: 130px;
+}
+.search_rec_tit{
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.search_con_sec1{
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+    height: 30px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+.search_con_sec1 p{
+    background: #f0f0f0;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+.search_con_sec2{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    height: 30px;
+    margin-bottom: 60px;
+    align-items: center;
+}
+.search_con_sec2 p{
+    background: #f0f0f0;
+    padding: 10px 15px;
+    border-radius: 50px;
+}
+.search_now_tit{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px;
+}
+.search_rec_mini{
+    color: #616161;
+    font-size: 12px;
+}
+.search_ranking{
+    text-align: left;
+}
+.search_ranking li{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px 20px 0px;
+}
+.search_num_r{
+    color: #E40030;
+    font-weight: 700;
+}
+.search_num_b{
+    color: #616161;
+    font-weight: 700;
+}
+.search_num_g{
+    color: #616161;
+}
+</style>
+<body>
+    <header id="header">
+     </header>
+        <div class="in">
+            <div class="m_login_page">
+                    <a href="#"><img src="./imges/common_svg/btn_back.svg" alt="backt_to_home" class="btn_back"></a>
+                    <h1 class="txt_about_login">회원가입</h1>
+            </div>
+            <div class="mlp_top mb50">
+                <img src="./imges/sec_sujung/Seoul_Arts_Center/images/login/logo_contents.jpg" alt="예술의전당 로고" class="mb30">
+                <p>우리나라 문화예술의 중심</p>
+                <p>예술의전당에 오신 것을 환영합니다.</p>
+            </div>
+            <div class="join_us_agree_box">
+                <div class="join_us_tit">
+                    <p class="txt_b"><span class="sj_edgebox"></span>회원약관 동의</p>
+                </div>
+                <ul class="join_us_content">
+                    <li>
+                        <div class="inputtit">
+                            성명<span class="inputstar">*</span>
+                        </div>
+                        <div class="inputtxt">
+                            <input type="text" name="textboxsj" class="inputtxt_deco">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inputtit">
+                            생년월일<span class="inputstar">*</span>
+                        </div>
+                        <div class="inputtxt">
+                            <input type="text" name="textboxsj" class="inputtxt_deco" placeholder="생년월일 5자리">
+                            <input type="radio" name="inputradio1">양력
+                            <input type="radio" name="inputradio1">음력
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inputtit">
+                            성별<span class="inputstar">*</span>
+                        </div>
+                        <div class="inputtxt">
+                            <input type="radio" name="inputradio2">남성
+                            <input type="radio" name="inputradio2">여성
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inputtit">
+                                아이디<span class="inputstar">*</span>
+                        </div>
+                        <div class="inputtxt">
+                            <div><input type="text" name="textboxsj" class="inputtxt_deco"><div class="inputbtn_g" id="popup_check">중복확인</div></div>
+                        </div>
+                        <p class="color_g movetext1">* 특수문자를 제외한 영문과 숫자 조합으로 입력해주세요.</p>
+                    </li>
+                    <li>
+                        <div class="inputtit">
+                            비밀번호<span class="inputstar">*</span>
+                        </div>
+                        <div class="inputtxt">
+                            <input type="password" name="textboxsj" class="inputtxt_deco" placeholder="8~12자 영문자+숫자+특수문자" maxlength="12">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inputtit">
+                            비밀번호 확인<span class="inputstar">*</span>
+                        </div>
+                        <div class="inputtxt">
+                            <input type="password" name="textboxsj" class="inputtxt_deco" maxlength="12">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inputtit">
+                            주소<span class="inputstar">*</span>
+                        </div>
+                        <div class="inputtxt">
+                            <div><input type="text" name="textboxsj" class="inputtxt_deco mb20" placeholder="우편번호 입력"><div class="inputbtn_g movetext4">검색</div></div>
+                            <input type="text" name="textboxsj" class="inputtxt_deco movetext2" placeholder="상세주소를 입력해주세요.">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inputtit">
+                            연락처<span class="inputstar">*</span>
+                        </div>
+                        <div class="inputtxt">
+                            <input type="tel" name="textboxsj" class="inputtxt_deco tel">-<input type="tel" name="textboxsj" class="inputtxt_deco tel">-<input type="tel" name="textboxsj" class="inputtxt_deco tel">
+                            <select name="phonecheck" id="user_phone" title="통신사 선택" class="inputtxt_deco tel mb20">
+                                <option value="k">통신사 선택</option>
+                                <option value="k">SKT</option>
+                                <option value="k">KT</option>
+                                <option value="k">LG</option>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inputtit movetext3">
+                            인증번호<span class="inputstar">*</span>
+                        </div>
+                        <div class="inputtxt">
+                            <div><input type="tel" name="textboxsj" class="inputtxt_deco" placeholder="인증번호를 입력해주세요."><div class="inputbtn_g" id="passed">인증확인</div></div>
+                        </div>
+                    </li>
+                    <li class="mb50">
+                        <div class="inputtit">
+                            이메일<span class="inputstar">*</span>
+                        </div>
+                        <div class="inputtxt">
+                            <input type="text" name="textboxsj" class="inputtxt_deco mail">@
+                            <input type="text" name="textboxsj" class="inputtxt_deco mail">
+                        </div>
+                    </li>
+                </ul>
+                <div class="flexboxx">
+                    <div class="sj_no_box"><a href="./mp_join_us_agree.html">취소</p></div>
+                    <div class="sj_ok_box"><a href="./mp_join_us_finish.html">확인</p></div>
+                </div>    
+    </div><!--in--> 
+    <!------------------------ pop-up-------------->
+            <div class="sec_popup" >
+                <div class="popup_box2" id="sec_popup_h">
+                    <div class="popup_content">
+                        <p class="color_r" id="popupfontt">Notify</p>
+                        <p id="popupfonttt">사용 가능합니다.</p>
+                    </div>
+                    <ul class="popup_cho">
+                        <li>
+                            <button type="button" class="popup_box2_no" id="popupfontttt" ><span><a href="./mp_join_us_input_your_info.html">확인</a></span></button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sec_popup2" >
+                <div class="popup_box3">
+                    <div class="popup_content">
+                        <p class="color_r" id="popupfontt">Notify</p>
+                        <p id="popupfonttt">인증완료 되었습니다.</p>
+                    </div>
+                    <ul class="popup_cho2">
+                        <li>
+                            <button type="button" class="popup_box2_no" id="popupfontttt3"><span>확인</span></button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    <!------------------------ pop-up/finish-------------->
+    </main>
+    <footer id="footer">
+        <div class="in footer_in">
+            <div class="footer_menu">
+                <p><a href="#">개인정보</a></p> 
+                <span class="bar"></span>
+                <p><a href="#">이용약관</a></p>
+            </div>
+            <div class="social">
+                <a href="https://www.facebook.com/SeoulArtsCenter.Korea"><img src="./imges/common_svg/icon_social_facebook.svg" alt="facebook"></a>
+                <a href="https://www.youtube.com/channel/UCUn8h6aG6rCM1zvXKIuNpVQ"><img src="./imges/common_svg/icon_social_youtube.svg" alt="youtube"></a>
+                <a href="https://www.instagram.com/Seoul_Arts_Center/"><img src="./imges/common_svg/icon_social_insta.svg" alt="instagram"></a>
+                <a href="https://x.com/I_Love_SAC"><img src="./imges/common_svg/icon_social_twitter.svg" alt="twitter"></a>
+            </div>
+            <div class="family_site">
+                <a href="#" class="btn_family">패밀리 사이트
+                    <span class="icon_arrow">
+                        <img src="./imges/common_svg/arrow_down_d9d9d9.svg" alt="">
+                    </span>
+                </a>
+                <div class="family_menu">
+                    <ul class="family_list">
+                        <li><a href="#">국립발레단</a></li>
+                        <li><a href="#">국립오페라단</a></li>
+                        <li><a href="#">국립합창단</a></li>
+                        <li><a href="#">국립현대무용단</a></li>
+                        <li><a href="#">국립심포니오케스트라</a></li>
+                        <li><a href="#">예술의전당 후원회</a></li>
+                        <li><a href="#">문화체육관광부</a></li>
+                    </ul>
+                </div>
+        </div>
+        <div class="footer_info">
+            <p>대표자  장형준     사업자등록번호  214-82-00264</p>
+            <p>통신판매업신고 서초 제 0706호</p>
+            <p>콜센터 1668-1352 </p>
+            <p>(월:09:00~18:00/화-일:09:00~20:00 (연중무휴))</p>
+            <p>주소 (우) 06757 서울시 서초구 남부순환로 2406 예술의전당</p>
+            <p class="copy">copyrightⓒ2023 Seoul Arts Center. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="./js/index.js"></script>
+    <!-- <script src="./js/sub_nav_tab.js"></script>
+    <script src="./js/main_nav.js"></script> -->
+    <script>
+//객체지정
+    let sjnav=document.querySelector(".m_nav_wrap");
+    let mnav=document.querySelector(".menu");
+    // let back=document.querySelectorAll(".btn_back");  
+    let sear=document.querySelector(".m_nav_wrap2");
+    let btn_sear=document.querySelector(".search");
+    let btn_eye=document.querySelector(".btn_login_eye");
+    let loginpw=document.querySelector("#userPW");
+    // let sj=loginpw.type;
+    // let ex=document.querySelector(".mlp_join_box") /*팝업 전 버튼 선택*/
+    let input_c=document.querySelector("#popup_check");
+    let popup=document.querySelector(".sec_popup");
+    let popupno=document.querySelector(".popup_box2_no");
+    
+    let passed=document.querySelector("#passed");
+    let popup2=document.querySelector(".popup_box3")
+    let popup3no=document.querySelector("#popupfontttt3")
+    // let popupyes=document.querySelector(".popup_yes")
+    // console.log(sj)
+    let sj_all=document.querySelector("#sj_ch"); /*약관동의*/
+    let sj_y_all=document.querySelectorAll(".sj_form_all");
+//네비게이션
+        // mnav.addEventListener("click",function(){
+        // // sjnav.classList.add("on")
+        //     sjnav.style.left=0+"px";
+        // back[0].addEventListener("click",function(){
+        //     sjnav.style.left=-100+"%";})
+        // })
+//서치창
+        // btn_sear.addEventListener("click",function(){
+        //     sear.style.left=0+"px";
+        // back[1].addEventListener("click",function(){
+        //     sear.style.left=-100+"%";})
+        //  })   
+//로그인창_비밀번호 블라인드
+        // btn_eye.addEventListener("click",function(){
+        //     if(sj==="password"){
+        //         loginpw.type="text"
+        //         btn_eye.children[0].src="./imges/sec_sujung/Seoul_Arts_Center/images/login/login_eye.svg"
+        //         sj="text"
+        //     }else{
+        //         loginpw.type="password"
+        //         this.children[0].src="./imges/sec_sujung/Seoul_Arts_Center/images/login/login_eye_close.svg"
+        //         sj="password"
+        //      }
+        // })
+//팝업창
+            input_c.addEventListener("click",function(){
+            popup.classList.add("active");
+         })
+            popupno.addEventListener("click",function(){
+             popup.classList.remove("active");
+         })
+/*------------------------------------------------------------*/
+            passed.addEventListener("click",function(){
+            popup2.classList.add("active");
+         })
+            popup3no.addEventListener("click",function(){
+             popup2.classList.remove("active");
+         })
+        //  popupyes.addEventListener("click",function(){
+        //      location.replace("http://127.0.0.1:5500/mp_search.html")
+        //  })
+//회원가입 약관동의
+        // console.log(sj_y_all)
+        // sj_all.addEventListener("click", function(){
+        //     if(sj_all.checked===true){
+        //         sj_y_all[0].checked=true;
+        //         sj_y_all[1].checked=true;
+        //         sj_y_all[2].checked=true;
+        //     }else{
+        //         for(let kk=0; kk<sj_all.lenght; kk++){
+        //             sj_all[kk].checked=false;
+        //         }
+        //     }
+        // })
+    </script>
+</body>
+</html>

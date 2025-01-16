@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+/* 웹폰트 호출 */
+@import url("https://hangeul.pstatic.net/hangeul_static/css/nanum-barun-gothic.css");
+/* 
+font-family: 'NanumBarunGothic';
+font-family: 'NanumBarunGothicBold';
+*/
+.su_container_chart{
+    padding: 0 0 30px 0;
+}
+.su_cored{
+    margin-top: 50px;
+    margin-bottom: 3px;
+    display: flex;
+}
+.su_red-bar{
+    width: 6px;
+    height: 15px;
+    background-color: #E40030;
+    margin-right: 10px;
+}
+.su_cored h3{
+    font-size: 16px;
+}
+.su_content{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+.su_card{
+    display: flex;
+    flex-direction: column;
+    width: 173px;
+}
+.su_card-top{
+    width: 173px;
+    height: 50px;
+    background-color: #D9D9D9;
+    border-radius: 6px 6px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+.su_card-bottom{
+    width: 173px;
+    height: 70px;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #F9F9F9;
+    border: 1px solid #D9D9D9;
+    border-radius: 0 0 6px 6px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;*/
+    /* word-break: keep-all; */
+    font-size: 14px;
+    
+}
+.su_card-bottom span{
+    display: block;
+}

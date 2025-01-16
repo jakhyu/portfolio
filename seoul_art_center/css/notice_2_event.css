@@ -1,0 +1,133 @@
+@charset "utf-8";
+
+html{
+    --mainColor:#e40030;
+    --textColor:#000;
+    --lightColor:#616161;
+    --menuTextColor:#a4a4a4;
+    --lineColor:#d9d9d9;
+  }
+  .bgcolor_r{background: var(--mainColor);}
+  .color_b{color: var(--textColor);}
+  .color_r{color:var(--mainColor);}
+  .color_g{color: var(--lightColor);}
+  .color_lg{color: var(--menuTextColor);}
+  .txt_b{font-family: 'NanumBarunGothicBold';}
+  *{margin: 0; padding: 0;}
+  *,*::after,*::before{box-sizing: border-box;}
+  a,span{display: inline-block; color: inherit;}
+  .mt30{
+    margin-top: 30px;
+  }
+  .mb10{
+    margin-bottom: 10px;
+  }
+  .mb5{
+    margin-bottom: 5px;
+  }
+
+
+
+.tablist{
+    font-size: 14px;
+    display: flex;
+    border-bottom: 1px solid var(--lineColor);
+    border-top: 1px solid var(--lineColor);
+}
+.tab{
+    display: block;
+    width: calc(100%/2);
+    padding: 10px;
+    text-align: center;
+}
+.tabpanel{
+    padding: 15px 0;
+    display: none;
+}
+.tab-bar{
+    border: 1px solid var(--lineColor);
+    height: 15px;
+    margin-top: 12px;
+}
+/* tab javascript */
+.tabpanel.active{
+    display: block;
+}
+.tab.active{
+    color: var(--textColor);
+}
+
+
+.j_subtit>h1{
+    padding: 50px 0 30px;
+    text-align: center;
+    font-size: 20px;
+}
+.j_subtit>h2{
+    padding: 50px 0;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+}
+/* tab1 */
+.j_graybox_e{
+    border: 1px solid var(--lineColor);
+    border-radius: 6px;
+    padding: 20px 30px;
+    text-align: center;
+    margin: 30px 0 50px; 
+}
+.j_graybox_e img{
+    width: 45%;
+    margin: 15px;
+}
+/* 진행예정 */
+.j_event_1{
+    margin: 30px 0;
+}
+.j_event_1 img{
+    margin-bottom: 20px;
+}
+/* 당첨자발표 */
+.j_year{
+    font-size: 20px;
+    margin: 50px 0;
+}
+.j_year img{
+    width: 25px; height: 25px;
+    margin: 0 10px;
+   vertical-align: middle;
+}
+.j_category_box{
+    border: 1px solid var(--lineColor);
+    width: 90px; height: 40px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    margin: 20px 10px;
+}
+.j_event_2{
+    border-bottom: 1px solid var(--lineColor);
+    padding-bottom: 20px;
+}
+.j_event2_txt{
+    margin: 10px;
+    
+}
+/* more */
+.j_more{
+    text-align: center;
+    color: #b4b4b4;
+    border-top: 1px solid var(--lineColor);
+    margin-top: 30px;
+    padding-top: 10px;
+}
+.j_more img{
+    width: 14px; 
+    margin-left: 10px;
+    transform: translateY(3px);
+}
+.j_event_tit{
+    font-size: 16px;
+    margin-bottom: 20px;
+}

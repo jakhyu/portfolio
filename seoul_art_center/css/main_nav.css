@@ -1,0 +1,369 @@
+@charset "utf-8";
+
+/* 웹폰트 호출 */
+@import url("https://hangeul.pstatic.net/hangeul_static/css/nanum-barun-gothic.css");
+/* 
+font-family: 'NanumBarunGothic';
+font-family: 'NanumBarunGothicBold';
+*/
+/* 초기화 */
+*::after,*::before{box-sizing: border-box;}
+ html {
+    line-height: 1.5;
+    -webkit-text-size-adjust: none;
+  }
+  a {text-decoration: none; color: inherit;}
+  abbr[title] {
+    border-bottom: none;
+    text-decoration: underline;
+    text-decoration: underline dotted;
+  }
+  img,video,iframe {
+    border: none;
+    max-width: 100%;
+  }
+  button,input,optgroup,select,textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.5;
+    margin: 0;
+    border: 0; outline: 0;
+    background: transparent;
+    border-radius: 0;
+    appearance: none; /*폼태그 디자인을 안보이게 함 - 선택*/
+  }
+  /* button::-moz-focus-inner,
+  [type="button"]::-moz-focus-inner,
+  [type="reset"]::-moz-focus-inner,
+  [type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+  }
+  button:-moz-focusring,
+  [type="button"]:-moz-focusring,
+  [type="reset"]:-moz-focusring,
+  [type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+  } */
+  fieldset {
+    padding: 0;
+    border: 0; outline: 0;
+  }
+  legend {
+    box-sizing: border-box;
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    padding: 0;
+    white-space: normal;
+  }
+  textarea {
+    overflow: auto;
+  }
+
+  [type="checkbox"],
+  [type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+  }
+
+  [type="number"]::-webkit-inner-spin-button,
+  [type="number"]::-webkit-outer-spin-button {
+    height: auto;
+  }
+  [type="search"] {
+    appearance: textfield;
+    outline-offset: -2px;
+  }
+  [type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+  ::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit;
+  }
+  template {
+    display: none;
+  }
+  [hidden] {
+    display: none;
+  }
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+  list-style: none;
+}
+
+/* 공통스타일 */
+.blind{}
+a,span,i{display: inline-block;}
+.thum img{display: block;}
+.in{
+  /* border: 1px dotted red; */
+  margin: 0 10px;
+}
+
+html{
+  --mainColor:#e40030;
+  --textColor:#000;
+  --lightColor:#616161;
+  --menuTextColor:#a4a4a4;
+  --lineColor:#d9d9d9;
+}
+.bgcolor_r{background: var(--mainColor);}
+.color_b{color: var(--textColor);}
+.color_r{color:var(--mainColor);}
+.color_g{color: var(--lightColor);}
+.color_lg{color: var(--menuTextColor);}
+.txt_b{font-family: 'NanumBarunGothicBold';}
+body{
+  font-size: 14px;
+  font-family: 'NanumBarunGothic';
+  line-height: 150%;
+}
+
+/* ------------------------------------------------공통추가 */
+.pt50{
+  padding-top: 50px;
+}
+.mb30{
+  margin-bottom: 30px;
+}
+
+
+/* ---------------------------------------------------수정 */
+
+.m_nav_wrap{
+  background: #fff;
+  position: fixed;
+  top: 0%;
+  left: -100%; /**/
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  transition: left 0.4s ease;
+  z-index: 999;
+  overflow: hidden;
+}
+.btn_back{
+  margin-left: 10px;
+}
+.m_nav_top{
+  background: #fff;
+  position: fixed;
+  top: -1px;
+  width: 100%;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  z-index: 999;
+}
+.m_nav_login{
+  color: #000;
+  font-size: 14px;
+  width: 90px; height: 30px;
+  border-radius: 50px;
+  background: #f0f0f0;
+  text-align: center;
+  line-height: 30px;
+  margin-right: 10px;
+}
+.lh{
+  line-height: 3;
+}
+.m_nav{
+  padding-top: 128px;
+  height: 100%;
+}
+.m_tit{
+  /* border: 1px solid red; */
+  text-align: center;
+  width: 50%;
+  padding: 30px 20px 20px 15px;
+  font-size: 16px;
+  position: relative;
+  cursor: pointer;
+}
+.m_lnb{
+  /* border: 1px solid red; */
+  background: #f0f0f0;
+  line-height: 2.0;
+  padding: 0px 15px;
+  position: absolute;
+  right: 0; top: -2px;
+  width: 50%; height: 1000px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display:none;
+  padding-top: 180px;
+}
+.m_lnb a{
+  display: block;
+}
+/*서치창*/
+.m_nav_top2{
+  position: fixed;
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  padding-top: 40px;
+  z-index: 999;
+  background: #fff;
+  }
+  .m_nav_wrap2{
+    background: #fff;
+    position: fixed;
+    left: -100%;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    transition: left 0.4s ease;
+    z-index: 999;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+/*여기서부터 수정 - 필요없는 부분은 주석으로 가렸음*/
+  .sac_search{
+      position: relative;
+      transform: translateY(-12px);
+      width: 90%;
+  }
+  .btn_sac_search{
+      /* position: absolute;
+      right: 50px; */
+      position: relative;
+  }
+  .btn_sac_search input{
+    width: 100%;
+  }
+  .btn_sac_search  .sear-btn{
+    position: absolute;
+    right: 5px; top:15px
+  }
+  .sac_search_d{
+      width: 100%;
+      height: 50px;
+      border: 1px solid #d9d9d9;
+      border-radius: 20px;
+      /* margin-right: 30px; */
+      cursor: pointer;
+  
+  }
+  .search_rec{
+      padding-top: 130px;
+  }
+  .search_rec_tit{
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 20px;
+  }
+  .search_con_sec1{
+      display: flex;
+      width: 90%;
+      justify-content: space-around;
+      height: 30px;
+      margin-bottom: 20px;
+      align-items: center;
+  }
+  .search_con_sec1 p{
+      background: #f0f0f0;
+      padding: 10px 20px;
+      border-radius: 50px;
+  }
+  .search_con_sec2{
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+      height: 30px;
+      margin-bottom: 60px;
+      align-items: center;
+  }
+  .search_con_sec2 p{
+      background: #f0f0f0;
+      padding: 10px 15px;
+      border-radius: 50px;
+  }
+  .search_now_tit{
+      display: flex;
+      justify-content: space-between;
+      padding-right: 20px;
+  }
+  .search_rec_mini{
+      color: #616161;
+      font-size: 12px;
+  }
+  .search_ranking{
+      text-align: left;
+  }
+  .search_ranking li{
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 15px 20px 0px;
+  }
+  .search_num_r{
+      color: #E40030;
+      font-weight: 700;
+  }
+  .search_num_b{
+      color: #616161;
+      font-weight: 700;
+  }
+  .search_num_g{
+      color: #616161;
+  }
+/*JAVA*/
+.m_tit.active + .m_lnb{
+  display: block;
+}
+.m_tit.active{
+  color: #fff;
+  background: var(--mainColor);
+}
+/*애니*/
+.sear_move1{ /*이달의공연*/
+  animation: move1 3s;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+}
+@keyframes move1{
+  0%{transform: translateY(0);}
+  100%{transform: translateY(-150px);}
+}
+.sear_move2{ /*크루즈 디에즈*/
+    animation: move2 3s;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+}
+@keyframes move2{
+  0%{transform: translateY(0);}
+  100%{transform: translateY(100px);}
+}
+.sear_move3{ /*비욘드 더 스크림*/
+    animation: move3 3s;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+}
+@keyframes move3{
+  0%{transform: translateY(0);}
+  100%{transform: translateY(50px);}
+}

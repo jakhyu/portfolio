@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1">
+    <title>예술의 전당</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/main_nav.css">
+    <link rel="stylesheet" href="./css/sub_nav_tab.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<style>
+       .tablist{
+            font-size: 14px;
+            display: flex;
+        }
+        .tab{
+            display: block;
+            text-align: center;
+            padding: 20px 10px;
+            color: #a4a4a4;
+        }
+        .tabpanel{
+            padding: 30px 0;
+            display: none;
+        }
+        .tabpanel.active{
+            display: block;
+        }
+        .tab.active{
+           border-bottom: 1px solid #000;
+           color: #000;
+        }
+        .ourslide {
+        text-align: center;
+        font-size: 14px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        }
+        .swiper-slide{
+        width: 18%;
+        }
+        .swiper-slide:nth-child(2){
+        width: 18%;
+        }
+        .swiper-slide:nth-child(3){
+        width: 40%;
+        }
+        .swiper-slide:nth-child(4){
+        width: 21%;
+        }
+        .swiper-slide:nth-child(5){
+        width: 18%;
+        }
+</style>
+<body>
+    <header id="header">
+        <div class="header_in in">
+            <div class="logo">
+                <a href="./blackgroup_mainpage.html"><img src="./imges/common_png/logo3.png" alt="예술의전당"></a>
+            </div>
+            <div class="header_icon">
+                <a href="#"><img src="./imges/common_svg/icon_search.svg" alt="search" class="search"></a>
+                <a href="#"><img src="./imges/common_svg/hamburger.svg" alt="menu" class="menu"></a>
+            </div>
+        </div>
+        <div class="m_nav_wrap">
+            <div class="m_mega_wrap">
+                <div class="m_nav_top">
+                    <div class="btn_back lh">
+                        <a href="#"><img src="./imges/common_svg/btn_back.svg" alt="backt_to_home"></a>
+                    </div>
+                    <div class="m_nav_txt"> 
+                        <p><span class="txt_b">로그인</span>하고</p>
+                        <p>예술의전당을 즐겨보세요!</p>
+                    </div>
+                    <div class="nav_login lh">
+                        <a href="#" class="m_nav_login">로그인</a>
+                    </div>
+                </div>
+                <nav class="m_nav">
+                    <ul class="gnb">
+                        <li class="d1">
+                            <div class="m_tit">
+                                <span class="m_tit_gnb">공연·전시</span>
+                            </div>
+                            <div class="m_lnb">
+                                <ul class="m_lnb-list">
+                                    <li><span class="m_tit_lnb txt_b">공연·전시</span></li>
+                                    <li><a href="./sub_per_main.html">오페라하우스</a></li>
+                                    <li><a href="./sub_per_main2.html">음악당</a></li>
+                                    <li><a href="./sub_per_main3.html">미술관·박물관</a></li>
+                                    <li><a href="./sub_sac.html">SAC 기획 프로그램</a></li>
+                                    <li><a href="./sub_package.html">패키지</a></li>
+                                </ul>
+                                <ul class="m_lnb-list pt50">
+                                    <li><span class="m_tit_lnb txt_b">티켓</span></li>
+                                    <li><a href="./book_ticket_1.html">예매하기</a></li>
+                                    <li><a href="./ticket_notice_1.html">티켓 예매 안내</a></li>
+                                    <li><a href="./ticket_notice_2.html">티켓 오픈 공지</a></li>
+                                    <li><a href="./ticket_notice_3.html">당일 할인 티켓</a></li>
+                                    <li><a href="./ticket_notice_4.html">환불· 변경안내</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="d1">
+                            <div class="m_tit">
+                                <span class="m_tit_gnb">아카데미</span>
+                            </div>
+                            <div class="m_lnb">
+                                <ul class="m_lnb-list">
+                                    <li><span class="m_tit_lnb txt_b"><a href="./sub_akademy.html">아카데미 메인</a></span></li>
+                                    <li><a href="#">인문·감상</a></li>
+                                    <li><a href="#">미술실기</a></li>
+                                    <li><a href="#">서화</a></li>
+                                    <li><a href="#">음악영재</a></li>
+                                    <li><a href="#">소소살롱</a></li>
+                                </ul>
+                                <ul class="m_lnb-list pt50">
+                                    <li><span class="m_tit_lnb txt_b"><a href="./sub_akademy_announcement.html">아카데미 안내</a></span></li>
+                                    <li><a href="#">아카데미 공지사항</a></li>
+                                    <li><a href="#">아카데미 FAQ</a></li>
+                                    <li><a href="#">아카데미 위치 및 연락처</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="d1">
+                            <div class="m_tit">
+                                <span class="m_tit_gnb">방문·이용</span>
+                            </div>
+                            <div class="m_lnb">
+                                <ul class="m_lnb-list">
+                                    <li><span class="m_tit_lnb txt_b"><a href="./sj_visit_space_all.html">공간소개</a></span></li>
+                                    <li><a href="#">공연장</a></li>
+                                    <li><a href="#">전시장</a></li>
+                                    <li><a href="#">공연영상스튜디오-실감</a></li>
+                                    <li><a href="#">야외공간</a></li>
+                                    <li><a href="#">홍보관</a></li>
+                                </ul>
+                                <ul class="m_linb-list pt50">
+                                    <li><a href="./sj_visit_map.html" class="txt_b">오시는 길·주차안내</a></li>
+                                </ul>
+                                <ul class="m_lnb-list pt50">
+                                    <li><a href="./sj_visit_conveni_service_all.html"><span class="m_tit_lnb txt_b">편의서비스</span></a></li>
+                                    <li><a href="#">공연장 편의서비스</a></li>
+                                    <li><a href="#">전시장 편의서비스</a></li>
+                                    <li><a href="#">음식점</a></li>
+                                    <li><a href="#">쇼핑</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="d1">
+                            <div class="m_tit">
+                                <span class="m_tit_gnb">대관안내</span>
+                            </div>
+                            <div class="m_lnb">
+                                <ul class="m_lnb-list">
+                                    <li><span class="m_tit_lnb txt_b"><a href="./sj_rental_studio_all.html">공간별 대관안내</a></span></li>
+                                    <li><a href="#">오페라하우스</a></li>
+                                    <li><a href="#">음악당</a></li>
+                                    <li><a href="#">미술관·박물관</a></li>
+                                    <li><a href="#">공연영상스튜디오-실감</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="d1">
+                            <div class="m_tit">
+                                <span class="m_tit_gnb">멤버십</span>
+                            </div>
+                            <div class="m_lnb">
+                                <ul class="m_lnb-list">
+                                    <li><span class="m_tit_lnb txt_b"><a href="#">멤버십</a></span></li>
+                                    <li><a href="./intro_sac01.html">멤버십 소개</a></li>
+                                    <li><a href="./intro_sac02.html">싹패스</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="d1">
+                            <div class="m_tit">
+                                <span class="m_tit_gnb">기관소개</span>
+                            </div>
+                            <div class="m_lnb">
+                                <ul class="m_lnb-list">
+                                    <li><span class="m_tit_lnb txt_b"><a href="./intro_goal.html">예술의전당 소개</a></span></li>
+                                    <li>인사말</li>
+                                    <li>운영이념</li>
+                                    <li>조직</li>
+                                </ul>
+                                <ul class="m_lnb-list pt50">
+                                    <li><span class="m_tit_lnb txt_b"><a href="./su_intro_organization.html">협력기관</a></span></li>
+                                    <li>상주단체·입주기관</li>
+                                    <li>유사기관·MOU기관</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="d1">
+                            <div class="m_tit">
+                                <span class="m_tit_gnb">전당소식</span>
+                            </div>
+                            <div class="m_lnb">
+                                <ul class="m_lnb-list txt_b">
+                                    <li><a href="./notice_1.html" class="mb30">공지사항</a></li>
+                                    <li><a href="./notice_2_event.html" class="mb30">이벤트</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="d1">
+                            <div class="m_tit">
+                                <span class="m_tit_gnb">고객센터</span>
+                            </div>
+                            <div class="m_lnb">
+                                <ul class="m_lnb-list txt_b">
+                                    <li><a href="./customer_support_1.html" class="mb30">서비스플라자</a></li>
+                                    <li><a href="./customer_support_2.html" class="mb30">FAQ</a></li>
+                                    <li><a href="./customer_support_3.html" class="mb30">1:1문의하기</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="m_nav_wrap2">
+            <div class="m_mega_wrap2">
+                <div class="m_nav_top2">
+                    <div class="btn_back lh">
+                        <a href="#"><img src="./imges/common_svg/btn_back.svg" alt="backt_to_home"></a>
+                    </div>
+                    <!--구조 수정했음-->
+                    <div class="sac_search">
+                        <form>
+                            <div class="btn_sac_search">
+                                <input type="text" name="search" placeholder="검색어를 입력해주세요." class="sac_search_d">
+                           
+                                <button type="submit" class="sear-btn">
+                                    <img src="./imges/sec_sujung/Seoul_Arts_Center/images/search/search.svg" alt="검색 내용 입력">
+                                </button>
+                            </div>
+                        </form>                        
+                    </div>
+                    
+                </div>
+                <div class="search_rec">
+                    <div class="search_tit_sec">
+                        <p class="search_rec_tit">추천 검색어</p>
+                    </div>
+                    <div class="search_con_sec">
+                        <div class="search_con_sec1">
+                            <p>#오텔로</p>
+                            <p>#이달의 공연</p>
+                            <p>#피아노</p>
+                        </div>
+                        <div class="search_con_sec2">
+                            <p>#발레</p>
+                            <p>#베르나르뷔페</p>
+                            <p>#크루즈 디에즈</p>
+                        </div>    
+                    </div>
+                </div>
+                <div class="search_now">
+                    <div class="search_now_tit">
+                        <p class="search_rec_tit">실시간 검색어</p>
+                        <p class="search_rec_mini">2024.7.18 18:00 기준</p>
+                    </div>
+                    <ul class="search_ranking">
+                        <li>
+                            <span class="search_num_r">1</span>
+                            <p>오페라 오텔로</p>
+                            <div>
+                                <span class="srarch_up"><img src="./imges/sec_sujung/Seoul_Arts_Center/images/search/search_up.svg" alt="검색어 순위 상승"></span>
+                                <span class="search_num_g">1</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="search_num_r">2</span>
+                            <p>4월은 너의 거짓말</p>
+                            <div>
+                                <span class="srarch_up"><img src="./imges/sec_sujung/Seoul_Arts_Center/images/search/search_up.svg" alt="검색어 순위 상승"></span>
+                                <span class="search_num_g">1</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="search_num_r">3</span>
+                            <p class="sear_move2">크루즈 디에즈 - RGB, 세기의 컬러들</p>
+                            <div>
+                                <span class="srarch_up"><img src="./imges/sec_sujung/Seoul_Arts_Center/images/search/search_down.svg" alt="검색어 순위 하강" class="sear_move2"></span>
+                                <span class="search_num_g sear_move2">2</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="search_num_b">4</span>
+                            <p>베르나르뷔페</p>
+                            <div>
+                                <span class="srarch_up"><img src="./imges/sec_sujung/Seoul_Arts_Center/images/search/search_up.svg" alt="검색어 순위 상승"></span>
+                                <span class="search_num_g">1</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="search_num_b">5</span>
+                            <p class="sear_move3">비욘드 더 스크림 에드바르 뭉크</p>
+                            <div>
+                                <span class="srarch_up"><img src="./imges/sec_sujung/Seoul_Arts_Center/images/search/search_down.svg" alt="검색어 순위 하강" class="sear_move3"></span>
+                                <span class="search_num_g sear_move3">1</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="search_num_b">6</span>
+                            <p class="sear_move1">이달의 공연</p>
+                            <div>
+                                <span class="srarch_up"><img src="./imges/sec_sujung/Seoul_Arts_Center/images/search/search_up.svg" alt="검색어 순위 상승" class="sear_move1"></span>
+                                <span class="search_num_g sear_move1">3</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="search_num_b">7</span>
+                            <p>2024 예술의전당 국제음악제</p>
+                            <div>
+                                <span>-<span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main id="container">
+        <div class="in"><!--in-->
+            <div class="s_lnb"><!--투뎁스텝-->
+                <div class="s_depth2">
+                    <p><a href="#" class="d2_name">방문·이용<span><img src="./imges/common_svg/arrow_down_d9d9d9.svg" alt="arrow"  class="s_arrow"></span></a></p>
+                
+                    <div class="s_nav_menu">
+                        <ul class="s_nav_list">
+                            <li><a href="./sub_per_main.html">공연·전시</a></li>
+                            <li><a href="./sub_akademy.html">아카데미</a></li>
+                            <li><a href="./sj_visit_space_all.html">방문·이용</a></li>
+                            <li><a href="./sj_rental_studio_all.html">대관안내</a></li>
+                            <li><a href="./intro_sac01.html">멤버십</a></li>
+                            <li><a href="./intro_goal.html">기관소개</a></li> 
+                            <li><a href="./customer_support_1.html">고객센터</a></li>
+                            <li><a href="./notice_1.html">전당소식</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="s_depth2">
+                    <p><a href="#" class="d2_name">공간소개<span><img src="./imges/common_svg/arrow_down_d9d9d9.svg" alt="arrow"  class="s_arrow"></span></a></p>
+                
+                    <div class="s_nav_menu">
+                        <ul class="s_nav_list">
+                            <li><a href="./sj_visit_space_all.html">공간소개</a></li>
+                            <li><a href="./sj_visit_map.html">오시는 길·주차안내</a></li>
+                            <li><a href="./sj_visit_conveni_service_all.html">편의서비스</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!--sLnb-->
+            <div id="tab-menu"><!--tab-menu_start-->
+                <div class="swiper ourSwiper">
+                    <div class="tablist swiper-wrapper ">
+                        <a href="#" class="tab active swiper-slide" id="tab1" rol="tab" aria-controls="tab-panel1">공연장</a> 
+                        <a href="#" class="tab swiper-slide" id="tab2" rol="tab" aria-controls="tab-panel2">전시장</a>
+                        <a href="#" class="tab swiper-slide" id="tab3" rol="tab" aria-controls="tab-panel3">공연영상스튜디오</a>
+                        <a href="#" class="tab swiper-slide" id="tab4" rol="tab" aria-controls="tab-panel4">야외공간</a>
+                        <a href="#" class="tab swiper-slide" id="tab5" rol="tab" aria-controls="tab-panel5">홍보관</a>
+                    </div>
+                </div>   
+                <div class="panels">
+                    <div id="tab-panel1" class="tabpanel active" role="tabpanel" aria-labelledby="tab1"> <!--공연장-->
+                        <h1 class="sj_big_tit">공간소개</h1>
+                        <div class="sj_tit"><span class="sj_edgebox"></span>공연장</div>
+                        <div class="sj_3d_site">
+                            <a href="#" class="sj_3d_family">오페라극장
+                                <span class="sj_icon_arrow">
+                                    <img src="./imges/common_svg/arrow_down_d9d9d9.svg" alt="sj_arrow_down">
+                                </span>
+                            </a>
+                            <div class="sj_3d_menu">
+                                <ul class="sj_3d_list">
+                                    <li><a href="#">CJ토월극장</a></li>
+                                    <li><a href="#">자유소극장</a></li>
+                                    <li><a href="#">콘서트홀</a></li>
+                                    <li><a href="#">IBK챔버홀</a></li>
+                                    <li><a href="#">리사이틀홀</a></li>
+                                    <li><a href="#">인춘아트홀</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sj_si_top">
+                            <div class="sj_si_icon">
+                                <img src="./imges/sec_sujung/Seoul_Arts_Center/images/space_introduce_concert/si_concert_icon.svg" alt="공연장 아이콘">
+                            </div>
+                            <div class="sj_si_txt">
+                                <p><span class="color_g">관람석 총</span>2,283석</p>
+                                <ul class="sj_si_txt_l.s">
+                                    <li><span class="color_g">일반 판매석</span>1,993석</li>
+                                    <li><span class="color_g">판매 보유석</span>290석</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sj_gallery-si mb30 swiper sjSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="sj_si_img swiper-slide slideconcert">
+                                    <img src="./imges/sec_sujung/Seoul_Arts_Center/images/space_introduce_concert/si_concert_pic_one.gif" alt="오페라극장 전경">
+                                </div>
+                                <div class="sj_si_img swiper-slide slideconcert">
+                                    <img src="./imges/sec_sujung/Seoul_Arts_Center/images/space_introduce_concert/si_concert_pic_two.gif" alt="오페라극장 무대">
+                                </div>
+                                <div class="sj_si_img swiper-slide slideconcert">
+                                    <img src="./imges/sec_sujung/Seoul_Arts_Center/images/space_introduce_concert/si_concert_pic_three.gif" alt="오페라극장 조명">
+                                </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div> 
+                        </div>    
+                        <div class="sj_si_content">
+                            <div class="sj_si_txt_1 mb30">
+                                <p class="txt_b">오페라극장</p>
+                                <p>2200여 개의 객석을 갖춘 오페라하우스의 대표 극장</p>
+                            </div>
+                            <div class="sj_si_txt_2 color_g mb30">
+                                <p>1993년 처음 관객을 맞은 오페라극장은 프로시니엄 아치형 무대와 고전적 말굽형 구조에 현대적 감각의 객석이 조화를 이루는 공연장으로 국내 최초의 오페라, 발레 전용극장이다.</p>
+                            </div>
+                            <div class="sj_si_txt_3 color_g mb50">
+                                <p>2008년 리노베이션을 거쳐 현재의 2,340석 규모로 재개관하였다. 주무대, 후무대, 좌·우 무대와 오케스트라 피트, 총 5개의 하부무대가 첨단 장비와 시스템에 유기적으로 연계 작동하는데, 상부 88개의 배튼을 비롯해 모든 각종 무대장치를 신속하고 화려하게 변모시켜준다.</p>
+                            </div>     
+                        </div>
+                        <div class="sj_si_txt_1 txt_b mb30">
+                            <p>공영장 좌석배치도</p>
+                        </div>
+                        <div class="sj_si_img_seating">
+                            <img src="./imges/sec_sujung/Seoul_Arts_Center/images/space_introduce_concert/si_concert_seating_pic_one.gif" alt="1층 좌석배치도">
+                        </div>
+                        <div class="sj_si_seating_about1">
+                            <p>1층 951석</p>
+                            <ul>
+                                <li>일반석 850석</li>
+                                <li>휠체어석 15석</li>
+                                <li>OP석 48석</li>
+                            </ul>
+                            <ul class="mb50">
+                                <li>시야제한석 38석</li>
+                            </ul>
+                        </div>
+                        <div class="sj_si_img_seating">
+                            <img src="./imges/sec_sujung/Seoul_Arts_Center/images/space_introduce_concert/si_concert_seating_pic_two.gif" alt="2층 좌석배치도">
+                        </div>
+                        <div class="sj_si_seating_about2">
+                            <p>2층 487석</p>
+                            <ul>
+                                <li>일반석 363석</li>
+                                <li>휠체어석 48석</li>
+                                <li>시야제한석 76석</li>
+                            </ul>
+                            <p>3층 451석</p>
+                            <ul>
+                                <li>일반석 378석</li>
+                                <li>휠체어석 5석</li>
+                                <li>시야제한석 68석</li>
+                            </ul>
+                            <p>4층 394석</p>
+                            <ul class="sj_si_seating_change">
+                                <li>일반석 334석</li>
+                                <li>시야제한석 60석</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="tab-panel2" class="tabpanel" role="tabpanel" aria-labelledby="tab2"> <!--전시장-->
+                        <h1 class="sj_big_tit">공간소개</h1>
+                        <div class="sj_tit"><span class="sj_edgebox"></span>전시장</div>
+                        <div class="sj_3d_site">
+                            <a href="#" class="sj_3d_family">한가람미술관
+                                <span class="sj_icon_arrow">
+                                    <img src="./imges/common_svg/arrow_down_d9d9d9.svg" alt="sj_arrow_down">
+                                </span>
+                            </a>
+                            <div class="sj_3d_menu sj_magic">
+                                <ul class="sj_3d_list">
+                                    <li><a href="#">한가람미술관</a></li>
+                                    <li><a href="#">한가람디자인미술관</a></li>
+                                    <li><a href="#">서울서예박물관</a></li>
+                                    <li><a href="#">한가람미술관 제7전시실</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sj_si_top">
+                            <div class="sj_si_icon">
+                                <img src="./imges/sec_sujung/Seoul_Arts_Center/images/space_introduce_exhibition/si_exhibition_icon.svg" alt="전시장 아이콘">
+                            </div>
+                            <div class="sj_si_txt">
+                                <p class="color_g">본관 전체 3층 총 6개 전시실</p>
+                                <ul class="sj_si_txt_l.s">
+                                    <li class="color_g">10:00 - 19:00</li>
+                                    <li>매주 월요일 휴관</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sj_gallery-si mb30 swiper sjSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="sj_si_img swiper-slide">
+                                    <img src="./imges/sec_sujung/Seoul_Arts_Center/images/space_introduce_exhibition/si_exhibition_pic_one.gif" alt="한가람미술관">
+                                </div>
+                                <div class="sj_si_img swiper-slide">
+                                    <img src="./imges/sec_sujung/Seoul_Arts_Center/images/space_introduce_exhibition/si_exhibition_pic_two.gif" alt="한가람미술관">
+                                </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div> 
+                        </div>    
+                        <div class="sj_si_content">
+                            <div class="sj_si_txt_1 mb30">
+                                <p class="txt_b">한가람미술관</p>
+                                <p>예술의전당에서 진행되는 다른 공간들 보다
+                                    편안하게 즐길 수 있는 열린 공간</p>
+                            </div>
+                            <div class="sj_si_txt_2 color_g mb30">
+                                <p>1990년에 문을 연 한가람미술관은 조형예술 전시를 위한 최적의 공간이다. 2003년 리노베이션을 거쳐 최신의 설비로 재탄생 하였다.</p>
+                            </div>
+                            <div class="sj_si_txt_3 color_g mb50">
+                                <p>지하 1층 지상 3층 건물에 6개의 전시장과 수장고를 가지고 있으며, 자연채광에 가까운 광천정 시스템으로 편안한 관람 분위기를 조성한다. 매년 50여 건이 넘는 전시행사가 개최되고 있으며 그 내용은 고대문명을 소개하는 전시회부터 현대 미술까지 아우르고 있다.</p>
+                            </div>     
+                        </div>
+                        <div class="sj_si_txt_1 txt_b mb30">
+                            <p>공간 평면도</p>
+                        </div>
+                        <div class="sj_tab_sec">
+                            <div class="sj_tablist color_g">
+                                <a href="#" class="sjtab active" id="sjtab1" role="tab" aria-controls="sjtab_panel1">1층</a>
+                                <a href="#" class="sjtab" id="sjtab2" role="tab" aria-controls="sjtab_panel2">2층</a>
+                                <a href="#" class="sjtab" id="sjtab3" role="tab" aria-controls="sjtab_panel3">3층</a>
+                            </div>    
+                            <div class="sjpanels">
+                                <div id="sjtab_panel1" class="sjtabpanel active" role="tabpanel" aria-controls="sjtab1">
+                                    <img src="./imges/sec_sujung/Seoul_Arts_Center/images/space_introduce_exhibition/si_exhibition_floorplan_one.svg" alt="한가람미술관 1층 도면">
+                                </div>
+                                <div id="sjtab_panel2" class="sjtabpanel" role="tabpanel" aria-controls="sjtab2">
+                                    <img src="./imges/sec_sujung/Seoul_Arts_Center/images/space_introduce_exhibition/si_exhibition_floorPlan_two.svg" alt="한가람미술관 2층 도면">
+                                </div>
+                                <div id="sjtab_panel3" class="sjtabpanel" role="tabpanel" aria-controls="sjtab3">
+                                    <img src="./imges/sec_sujung/Seoul_Arts_Center/images/space_introduce_exhibition/si_exhibition_floorplan_three.svg" alt="한가람미술관 3층 도면">
+                                </div>
+                            </div>            
+                        </div>
+                        <div class="sj_si_txt_2 txt_b mb30">
+                            <p>한가람미술관 편의시설</p>
+                        </div>
+                        <div>
+                            <img src="./imges/sec_sujung/Seoul_Arts_Center/images/space_introduce_exhibition/si_exhibition_stroller.jpg" alt="유모차 대여 사진" class="strollerimg">
+                            <p class="color_g">미술관 1층에 위치하고 있으며</p>
+                            <p class="color_g mb50">휠체어, 유모차가 준비되어 있습니다.</p>
+                        </div>
+                    </div>
+                    <div id="tab-panel3" class="tabpanel" role="tabpanel" aria-labelledby="tab3"><!--스튜디오-->
+                        <h1 class="sj_big_tit">공간소개</h1>
+                        <div class="sj_tit"><span class="sj_edgebox"></span>공연영상스튜디오-실감</div>
+                        <div class="sj_si_top pt30">
+                            <div class="sj_si_icon">
+                                <img src="./imges/sec_sujung/Seoul_Arts_Center/images/space_introduce_studio/si_icon_camera.svg" alt="공연장 아이콘">
+                            </div>
+                            <div class="sj_si_txt">
+                                <ul class="sj_si_txt_i pt30">
+                                    <li class="color_g">본관 전체 규모 : 17M × 13M × 5M</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sj_gallery-si mb30 swiper sjSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="sj_si_img swiper-slide">
+                                    <img src="./imges/sec_sujung/Seoul_Arts_Center/images/space_introduce_studio/si_studio_1.jpg" alt="스튜디오 전경">
+                                </div>
+                                <div class="sj_si_img swiper-slide">
+                                    <img src="./imges/sec_sujung/Seoul_Arts_Center/images/space_introduce_studio/si_studio_2.jpg" alt="스튜디오 카메라">
+                                </div>
+                                <div class="sj_si_img swiper-slide">
+                                    <img src="./imges/sec_sujung/Seoul_Arts_Center/images/space_introduce_studio/si_studio_3.jpg" alt="스튜디오 컬러존">
+                                </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div> 
+                        </div>    
+                        <div class="sj_si_content">
+                            <div class="sj_si_txt_1 mb20">
+                                <p class="txt_b">고품질 공연 영상 제작을 위한 올인원 스튜디오</p>
+                            </div>
+                            <div class="sj_si_txt_2 color_g mb20">
+                                <p>2022년에 문을 연 공연영상스튜디오 ‘실감’은 대한민국 공연 
+                                    예술기관 최초의 영상 스튜디오이며 영상 제작에서부터 송출까지 한 번에 할 수 있는 올인원 스튜디오입니다.</p>
+                            </div>
+                            <div class="sj_si_txt_3 color_g mb50">
+                                <p>공연영상스튜디오는 가로17M,세로13M,높이5M 규모의 
+                                    화이트 호리존으로 꾸며져있으며 독일 ARRI 사의 스카이 
+                                    패널 라이트가 설치되어 있어서 영상 촬영 시 부드럽고 밝은 빛을 연출할 수 있습니다. 공간 대관뿐만 아니라 영상 제작, 색보정, 음향후반편집 등과 같은 기술 서비스도 제공하고 있습니다.</p>
+                            </div>     
+                        </div> 
+                        <div class="sj_si_txt_1 txt_b mb30">
+                            <p>부속시설</p>
+                        </div>
+                        <div class="studio content1">
+                            <div class="sj_si_img_studio mb20">
+                                <img src="./imges/sec_sujung/Seoul_Arts_Center/images/space_introduce_studio/si_studio_soundroom.jpg" alt="음향후반편집실">
+                            </div>
+                            <p class="mb20">음향후반 편집실</p>
+                            <p class="color_g">사운드 믹싱, 효과음 추가, 노이즈 제거 등 음향 후반 작업을</p>
+                            <p class="color_g mb30">통해 영상의 목적에 맞는 사운드를 만들어냅니다.</p>
+                            <p class="color_g">미술관 1층에 위치하고 있으며</p>
+                            <p class="color_g mb50">휠체어, 유모차가 준비되어 있습니다.</p>
+                        </div>
+                        <div class="studio content2">
+                            <div class="sj_si_img_studio mb20">
+                                <img src="./imges/sec_sujung/Seoul_Arts_Center/images/space_introduce_studio/si_studio_colorroom.jpg" alt="색보정실">
+                            </div>
+                            <p class="mb20">색보정실</p>
+                            <p class="color_g">다양한 룩을 적용하여 영화나 CF에서 볼 수 있는 수준의 색감과</p>
+                            <p class="color_g mb50">질감을 얻을 수 있습니다.</p>
+                        </div>
+                    </div>
+                    <div id="tab-panel4" class="tabpanel" role="tabpanel" aria-labelledby="tab4"><!--야외공간-->
+                        <h1 class="sj_big_tit">공간소개</h1>
+                        <div class="sj_tit"><span class="sj_edgebox mb30"></span>야외공간</div>
+                        <div class="sj_gallery-si mb30 swiper sjSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="sj_si_img swiper-slide">
+                                    <img src="./imges/sec_sujung/Seoul_Arts_Center/images/space_introduce_outdoor/si_outdoor_pic_1.jpg" alt="음악광장 사진">
+                                </div>
+                                <div class="sj_si_img swiper-slide">
+                                    <img src="./imges/sec_sujung/Seoul_Arts_Center/images/space_introduce_outdoor/si_outdoor_pic_2.jpg" alt="음악광장과 예술의전당 본관">
+                                </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div> 
+                        </div>    
+                        <div class="sj_si_content mb50">
+                            <div class="sj_si_txt_1">
+                                <p class="txt_b">음악광장</p>
+                            </div>
+                            <div class="sj_si_txt_2 mb30">
+                                <p>음악당과 서울서예박물관 사이에 위치한</p>
+                                <p>예술의전당의 중심광장</p>
+                            </div>
+                            <div class="sj_si_txt_3 color_g">
+                                <p>음악광장에는 예술의전당 문화광장의 최고 명소인 세계음악분수 (World Music Fountain)가 자리하고 있다.</p>
+                            </div>     
+                        </div>
+                        <div class="sj_gallery-si mb30 swiper sjSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="sj_si_img swiper-slide">
+                                    <img src="./imges/sec_sujung/Seoul_Arts_Center/images/space_introduce_outdoor/si_outdoor_pic_3.jpg" alt="세계음악분수 낮">
+                                </div>
+                                <div class="sj_si_img swiper-slide">
+                                    <img src="./imges/sec_sujung/Seoul_Arts_Center/images/space_introduce_outdoor/si_outdoor_pic_4.jpg" alt="세계음악분수 밤">
+                                </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div> 
+                        </div>    
+                        <div class="sj_si_content mb50">
+                            <div class="sj_si_txt_1">
+                                <p class="txt_b">세계음악분수</p>
+                            </div>
+                            <div class="sj_si_txt_2 mb30">
+                                <p>밤이 되면 화려한 조명이 더해지면서 장관을 연출</p>
+                            </div>
+                            <div class="sj_si_txt_3 color_g">
+                                <p class="mb20">2002년 가동을 시작한 세계음악분수는 예술의전당이 도심 속 휴식공간으로 사랑 받으며 서울의 명소로 자리매김하는 촉매가 되고 있다.</p>
+                                <p>국내 최대규모의 노즐을 갖춘 세계음악
+                                    분수는  살아 움직이는 듯한 물줄기와 탄성을 자아내는 
+                                    거대한 분수 효과를 선보이고 있다. 예술의전당이 선곡한 
+                                    다양한 음악에 맞춰 화려한 분수쇼가 선보여지는데, 특히 
+                                    밤시간에 화려한 조명과 어우러져 장관을 연출한다. </p>
+                            </div>     
+                        </div>
+                        <div class="sj_gallery-si mb30 swiper sjSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="sj_si_img swiper-slide">
+                                    <img src="./imges/sec_sujung/Seoul_Arts_Center/images/space_introduce_outdoor/si_outdoor_pic_5.jpg" alt="세계음악분수 낮">
+                                </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div> 
+                        </div>    
+                        <div class="sj_si_content mb50">
+                            <div class="sj_si_txt_1">
+                                <p class="txt_b">계단광장</p>
+                            </div>
+                            <div class="sj_si_txt_2 mb30">
+                                <p>다양한 행사와 이벤트가 진행되는 열린 공간</p>
+                            </div>
+                            <div class="sj_si_txt_3 color_g">
+                                <p class="mb20">아트마켓, 야외페스티벌, 하절기 시즌 야외카페운영 등 다양한 행사와 이벤트가 진행되는 열린 공간이다.</p>
+                                <p>또한, 대중 프로그램 수용공간으로서 팝콘서트가 열리기도 
+                                    하고 퍼포먼스 · 해프닝 등 실험적인 공연, 아마추어 아티스트들의 발표의 장으로도 활용된다.</p>
+                            </div>     
+                        </div>
+                    </div>
+                    <div id="tab-panel5" class="tabpanel" role="tabpanel" aria-labelledby="tab5"><!--홍보관-->
+                        <h1 class="sj_big_tit">공간소개</h1>
+                        <div class="sj_tit"><span class="sj_edgebox mb30"></span>홍보관(@700)</div>
+                        <div class="sj_gallery-si">
+                            <div class="sj_si_img  mb20">
+                                <img src="./imges/sec_sujung/Seoul_Arts_Center/images/space_introduce_promotion/si_promotion_pic_1.jpg" alt="홍보관700사진">
+                            </div>    
+                        <div class="sj_si_content mb50">
+                            <div class="sj_si_txt_1">
+                                <p class="txt_b">@700,</p>
+                                <p class="txt_b mb20">서초동 700번지 이야기</p>
+                            </div>
+                            <div class="sj_si_txt_2 mb30">
+                                <p class="color_g mb20">예술의전당은 개관 25주년인 2013년 2월 15일(금) 예술의전당 오페라하우스 안에 예술의전당 홍보관을 개관했습니다.</p>
+                                <p class="color_g">홍보관의 정식 명칭은 @700으로 서초동 700번지에 위치한 예술의전당의 과거, 현재, 미래의 이야기를 담은 장소라는 뜻입니다.</p>
+                            </div>  
+                        </div>
+                        <div class="sj_gallery-si">
+                            <div class="sj_si_img mb20">
+                                <img src="./imges/sec_sujung/Seoul_Arts_Center/images/space_introduce_promotion/si_promotion_pic_2.jpg" alt="오페라극장 사진">
+                            </div>    
+                        <div class="sj_si_content mb50">
+                            <div class="sj_si_txt_1">
+                                <p class="txt_b">오페라의 역사</p>
+                                <p class="mb20">밤이 되면 화려한 조명이 더해지면서 장관을 연출</p>
+                            </div>
+                            <div class="sj_si_txt_2 mb30">
+                                <p class="color_g mb20">예오페라하우스 M층에서 오페라하우스 2층으로 올라오는 계단 옆 공간인 낮은음자리와 높은음자리에는 휴식공간과 더불어 예술의전당 상주단체의 전시품과 예술의전당과 함께한 오페라의 역사를 담아내었습니다.
+                                </p>
+                                <p class="color_g mb30">낮은음자리에서는 국립오페라단 ‘시몬보카네그라’의 의상과 ‘카르멘’의 무대 미니어처, 국립발레단 ‘라이몬다’의 의상이 전시되었고, 포토존이 설치되어 있어 무대위에서의 한 장면을 추억에 남길 수 있습니다.</p>
+                                <p class="color_g">낮높은음자리에서는 역대 오페라를 소개하는 곳으로 무대스케치와 프로그램, 의상 등이 전시되어있습니다.</p>
+                            </div>  
+                        </div>
+                        <div class="sj_gallery-si">
+                            <div class="sj_si_img mb20">
+                                <img src="./imges/sec_sujung/Seoul_Arts_Center/images/space_introduce_promotion/si_promotion_pic_3.jpg" alt="홍보관700사진">
+                            </div>    
+                            <div class="sj_si_txt_2 mb50">
+                                <p class="color_g mb20">오페라하우스 3층 로비에서는 25주년 기념 프로그램을 소개하고, CJ 토월극장의 재개관 기념 뮤지컬 <살짜기옵서예> 무대 미니어처를 비롯하여 연극 <혈맥>의 영화버전 대본과 연극 <만선>의 프로그램 책자 등이 전시되어 있습니다.</p>
+                                <p class="color_g">그동안 오페라극장과 토월극장에서 올려진 공연등을 소개하는 자료를 비치하여 오페라하우스 전 공간에서 25년의 역사를 한눈에 살펴볼 수 있습니다.</p>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div><!--tab menu-->
+        </div><!--in-->     
+    </main>
+    <footer id="footer">
+        <div class="in footer_in">
+            <div class="footer_menu">
+                <p><a href="#">개인정보</a></p> 
+                <span class="bar"></span>
+                <p><a href="#">이용약관</a></p>
+            </div>
+            <div class="social">
+                <a href="#"><img src="./imges/common_svg/icon_social_facebook.svg" alt="facebook"></a>
+                <a href="#"><img src="./imges/common_svg/icon_social_youtube.svg" alt="youtube"></a>
+                <a href="#"><img src="./imges/common_svg/icon_social_insta.svg" alt="instagram"></a>
+                <a href="#"><img src="./imges/common_svg/icon_social_twitter.svg" alt="twitter"></a>
+            </div>
+            <div class="family_site">
+                <a href="#" class="btn_family">패밀리 사이트
+                    <span class="icon_arrow">
+                        <img src="./imges/common_svg/arrow_down_d9d9d9.svg" alt="">
+                    </span>
+                </a>
+                <div class="family_menu">
+                    <ul class="family_list">
+                        <li><a href="https://www.korean-national-ballet.kr/ko">국립발레단</a></li>
+                        <li><a href="https://www.nationalopera.org/cpage">국립오페라단</a></li>
+                        <li><a href="http://nationalchorus.or.kr/">국립합창단</a></li>
+                        <li><a href="https://www.kncdc.kr/">국립현대무용단</a></li>
+                        <li><a href="https://www.knso.or.kr/">국립심포니오케스트라</a></li>
+                        <li><a href="http://www.p-sac.or.kr/">예술의전당 후원회</a></li>
+                        <li><a href="https://www.mcst.go.kr/kor/main.jsp">문화체육관광부</a></li>
+                    </ul>
+                </div>
+            </div>
+        <div class="footer_info">
+            <p>대표자  장형준     사업자등록번호  214-82-00264</p>
+            <p>통신판매업신고 서초 제 0706호</p>
+            <p>콜센터 1668-1352 </p>
+            <p>(월:09:00~18:00/화-일:09:00~20:00 (연중무휴))</p>
+            <p>주소 (우) 06757 서울시 서초구 남부순환로 2406 예술의전당</p>
+            <p class="copy">copyrightⓒ2023 Seoul Arts Center. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="./js/index.js"></script>
+    <script src="./js/sub_nav_tab.js"></script>
+    <script src="./js/main_nav.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+//객체지정
+    let sjnav=document.querySelector(".m_nav_wrap");//네비
+    let mnav=document.querySelector(".menu");
+    let sear=document.querySelector(".m_nav_wrap2");//서치
+    let btn_sear=document.querySelector(".search");
+    let sjtabitem=document.querySelectorAll(".sjtab"); //본문박스tab
+    let sjpanels=document.querySelectorAll(".sjtabpanel")
+    let tabitem=document.querySelectorAll(".tab")//LNB슬라이드tap
+    let panels=document.querySelectorAll(".tabpanel")
+    let sj_btn=document.querySelectorAll(".sj_3d_family");//본문하위메뉴쓰리뎁
+    let sj_site=document.querySelectorAll(".sj_3d_site");
+//네비
+        mnav.addEventListener("click",function(){
+        // sjnav.classList.add("on")
+            sjnav.style.left=0+"px";
+        back[0].addEventListener("click",function(){
+            sjnav.style.left=-100+"%";})
+        })
+//서치
+        btn_sear.addEventListener("click",function(){
+            sear.style.left=0+"px";
+        back[1].addEventListener("click",function(){
+            sear.style.left=-100+"%";})
+         })
+ //플러그인        
+         var swiper = new Swiper(".sjSwiper", {
+        navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+        autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    loop: true,
+    });
+//본문하위메뉴
+    sj_btn[0].addEventListener("click", function(e){
+    e.preventDefault();
+    sj_site[0].classList.toggle("open");  
+    return false;
+})
+    sj_btn[1].addEventListener("click", function(e){
+    e.preventDefault();
+    sj_site[1].classList.toggle("open");  
+    return false;
+})
+//LNB슬라이드tab
+        tabitem.forEach(function(item, idx){
+        item.addEventListener("click",function(e){
+            e.preventDefault();
+            for(let i=0; i<tabitem.length; i++){
+            tabitem[i].classList.remove("active");
+            panels[i].classList.remove("active");
+        }
+        this.classList.add("active");
+        panels[idx].classList.add("active");
+        }) 
+    });
+    var swiper = new Swiper(".ourSwiper", {
+    scrollbar: {
+    el: ".swiper-scrollbar",
+    hide: true,
+    },
+    slidesPerView: "auto",
+    spaceBetween: 10,
+    });
+//본문박스텝
+    sjtabitem[0].addEventListener("click", function(e){
+        e.preventDefault();
+        for(let i=0; i<sjtabitem.length; i++){
+            sjtabitem[i].classList.remove("active")
+            sjpanels[i].classList.remove("active")
+        }
+        this.classList.add("active")
+        sjpanels[0].classList.add("active");
+    })
+    sjtabitem[1].addEventListener("click", function(e){
+        e.preventDefault();
+        for(let i=0; i<sjtabitem.length; i++){
+            sjtabitem[i].classList.remove("active")
+            sjpanels[i].classList.remove("active")
+        }
+        this.classList.add("active")
+        sjpanels[1].classList.add("active");
+    })
+    sjtabitem[2].addEventListener("click", function(e){
+        e.preventDefault();
+        for(let i=0; i<sjtabitem.length; i++){
+            sjtabitem[i].classList.remove("active")
+            sjpanels[i].classList.remove("active")
+        }
+        this.classList.add("active")
+        sjpanels[2].classList.add("active");
+    })
+
+    </script>
+</body>
+</html>

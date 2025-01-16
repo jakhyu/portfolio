@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1">
+    <title>예술의 전당 - 티켓 예매하기</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/book_ticket_3.css">
+</head>
+<body>
+    <div class="in">
+        <div class="j_book_top">
+            <a href="#" class="btn_back"><img src="./imges/common_svg/btn_back.svg" alt="티켓예매 나가기"></a>
+            <h1>예매하기</h1>
+        </div>   
+    </div>
+        <div class="in j_book_ticket">
+            <h2 class="j_sc">좌석선택</h2>
+            <div class="j_select_seat_area">
+                <div class="j_seat_img">
+                    <img src="./imges/sec_jinhyun/book_ticket_seat.png" alt="좌석배치도">
+                </div>    
+                <p class="color_g mt50">선택 좌석</p>
+                <div class="j_seat_select">
+                    
+                    <p>좌석 등급</p>
+                    <p>좌석 번호</p>
+                </div>
+                <div class="j_seat">
+                    <div class="j_seat_info">
+                        <div class="j_seat_grade">
+                            <span class="seat_color_p"></span>
+                            <p>R석</p>
+                            
+                        </div>
+                        <p class="j_seat_number">1층 B블록 11열 16</p>
+                    </div>
+                </div>
+            </div>
+            <div class="j_btn_area">
+                <div class="j_btn_b"><a href="./book_ticket_2.html">이전</a></div>
+                <div class="j_btn_n"><a href="./book_ticket_4.html">다음</a></div>
+            </div>
+        </div>
+
+<script>
+    let seat=document.querySelector(".j_seat_img");
+    let seatnum=document.querySelector(".j_seat");
+
+    seat.addEventListener("click", function(){
+        seatnum.style.display="block"
+    })
+    let back=document.querySelectorAll(".btn_back"); 
+    document.querySelector(".btn_back").addEventListener("click",function(){
+    history.back();
+})
+</script>
+</body>
+</html>

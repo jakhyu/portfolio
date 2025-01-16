@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+    <title>JAVASCRIPT</title>
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box;}
+        img{max-width: 100%;}
+
+        #header,#footer{
+            height: 60px;
+            background: #aaa;
+        }
+        #container{
+            height: 2000px;
+            background: azure;
+        }
+        .modal{
+            position: fixed;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, .6);
+            left: 0; top: 0;
+            z-index: 99;
+            display: none;
+        }
+        .pop-up{
+            height: 350px;
+            background: #fff;
+            position: fixed;
+            left: 0; bottom: -360px;
+            z-index: 100;
+            transition: 0.3s;
+        }
+        .pic{
+            padding: 10px;
+            overflow: hidden;
+            height: 300px;
+        }
+        .btn-area{
+            background: #fff;
+            text-align: right;
+        }
+        .btn{
+            padding: 10px 20px;
+            background: transparent;
+            border: none;
+        }
+        #wrap.active .modal{
+            display: block;
+        }
+        #wrap.active .pop-up{
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">HEADER</header>
+        <main id="container"></main>
+        <footer id="footer"></footer>
+
+        <!-- popup -->
+         <div class="modal"></div>
+         <div class="pop-up">
+            <div class="pic">
+                <img src="./images/05.jpeg" alt="image">
+            </div>
+            <div class="btn-area">
+                <button type="button" class="btn">close</button>
+            </div>
+         </div>
+    </div>
+
+    <script>
+        let win=document.querySelector("#wrap");
+        let btn=document.querySelector(".btn");
+        setTimeout(function(){
+            win.classList.add("active");
+        }, 3000)
+        btn.addEventListener("click", function(){
+            win.classList.remove("active");
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+@charset "utf-8";
+
+/* .header_in{
+  background: linear-gradient(#1f1f1f,#4d4d4d9e,#ffffff00);
+  position: relative;
+} */
+
+/* container */
+
+/* visual slide */
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    word-break: keep-all;
+  }
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .swiper-pagination{
+    padding: 3px;
+    background: rgba(0 , 0, 0, .5);
+    width: 60px;
+    border-radius: 20px;
+    margin-left: 80%;
+    color: #fff;
+    font-size: 12px;
+  }
+  .swiper-txt{
+    position: absolute;
+    bottom: 10px; left: 15px;
+    color: #fff;
+    text-align: left;
+    font-size: 20px;
+  }
+  .swiper-txt-place{
+    font-size: 14px;
+  }
+  .swiper-txt-date{
+    font-size: 14px;
+  }
+  .txt_sha{
+    text-shadow: 0px 0px 5px #fff;
+  }
+  /* contents */
+.contents{
+    height: 200px;
+    margin: 10px 0;
+    background: #eaeaea;
+    text-align: center;
+}
+.main_tit1{
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 50px auto; 
+}
+.perlist_txt{
+  font-size: 14px;
+  color: var(--lightColor);
+  text-align: left;
+}
+.per_tit{
+  font-size: 16px;
+  color: #000;
+
+}
+/* popup */
+.modal{
+    position: fixed;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, .6);
+    left: 0; top: 0;
+    z-index: 99;
+    /* display: none; */
+}
+.pop-up{
+    height: 350px;
+    background: #fff;
+    position: fixed;
+    left: 0; bottom: -360px;
+    z-index: 100;
+    transition: 0.3s;
+    z-index: 1000;
+}
+.pop_pic{
+    padding: 10px;
+    overflow: hidden;
+    height: 300px;
+}
+.btn-area{
+    background: #fff;
+    text-align: right;
+}
+.pop_btn{
+    padding: 10px 20px;
+    background: transparent;
+    border: none;
+}
+#pop_wrap.active .modal{
+    display: block;
+}
+#pop_wrap.active .pop-up{
+    bottom: 0;
+}
+/* 배너 */
+.banner1_sns{
+  position: absolute;
+  bottom: 25px; right: -40px;
+  scale: 0.5;
+}
+.banner1_sns{
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+}
